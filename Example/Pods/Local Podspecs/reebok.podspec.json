@@ -1,0 +1,22 @@
+{
+  "name": "reebok",
+  "version": "0.1.0",
+  "summary": "A short description of reebok.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/<GITHUB_USERNAME>/reebok",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "pankaj verma": "pankaj.verma@timesinternet.in"
+  },
+  "source": {
+    "git": "https://github.com/<GITHUB_USERNAME>/reebok.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "source_files": "reebok/Classes/**/*"
+}

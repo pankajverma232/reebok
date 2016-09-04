@@ -1,0 +1,6 @@
+framework module Pods_reebok_Tests {
+  umbrella header "Pods-reebok_Tests-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -1,0 +1,16 @@
+PODS:
+  - reebok (0.1.0)
+
+DEPENDENCIES:
+  - reebok (from `../`)
+
+EXTERNAL SOURCES:
+  reebok:
+    :path: ../
+
+SPEC CHECKSUMS:
+  reebok: cd2087a3e6f47abe9997e0c7b2bd598702bfba90
+
+PODFILE CHECKSUM: 6cb158ee41e9d67d7b72ba7937bf9c10c7a311b0
+
+COCOAPODS: 1.0.1

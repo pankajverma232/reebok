@@ -1,0 +1,6 @@
+framework module reebok {
+  umbrella header "reebok-umbrella.h"
+
+  export *
+  module * { export * }
+}
