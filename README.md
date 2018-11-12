@@ -1,6 +1,6 @@
 <p><strong>&nbsp;</strong></p>
-<p style="text-align: center;"><strong>Cross App Native SSO Integration</strong></p>
-<p><strong>Documents versions</strong><span style="font-weight: 400;">:</span></p>
+<h1 style="text-align: center;"><strong>Cross App Native SSO Integration</strong></h1>
+<h2><strong>Documents versions</strong><span style="font-weight: 400;">:</span></h2>
 <table style="margin-left: auto; margin-right: auto;">
 <tbody>
 <tr>
@@ -46,7 +46,7 @@
 </tr>
 </tbody>
 </table>
-<p style="text-align: left;"><br />&nbsp;&nbsp;&nbsp;<strong>Table of Contents&nbsp;</strong></p>
+<h2 style="text-align: left;"><br />&nbsp;&nbsp;&nbsp;<strong>Table of Contents&nbsp;</strong></h2>
 <p>1.0 Introduction&nbsp;</p>
 <p><span style="font-weight: 400;">1.1</span>&nbsp;<span style="font-weight: 400;">User Profile Handling</span>&nbsp;</p>
 <p><span style="font-weight: 400;">1.2</span>&nbsp;<span style="font-weight: 400;">Local and Global login sessions</span>&nbsp;</p>
@@ -54,12 +54,14 @@
 <p><span style="font-weight: 400;">3.0</span>&nbsp;<span style="font-weight: 400;">SSO Plug-in available for different Platforms</span>&nbsp;</p>
 <p><span style="font-weight: 400;">3.1</span>&nbsp;<span style="font-weight: 400;">iOS</span><span style="font-weight: 400;">&nbsp;Installation:</span>&nbsp;</p>
 <p><span style="font-weight: 400;">4.0</span>&nbsp;<span style="font-weight: 400;">FAQ</span>&nbsp;<span style="font-weight: 400;">&nbsp;</span></p>
-<p><strong>&nbsp;Introduction</strong></p>
+<p>&nbsp;</p>
+<h2><strong>&nbsp;Introduction</strong></h2>
 <p><span style="font-weight: 400;">Cross app Native SSO Integration is an authentication system that permits a user to login with email/ mobile and password/OTP on a single app and get auto login on across the Times network with cross app SSO integration.</span></p>
 <p><span style="font-weight: 400;">SSO - Single Sign On centrally manages the authentication of users across the Times network. SSO handles both the sub domain and cross domain login.</span></p>
 <p><span style="font-weight: 400;">It allows users to connect over cross domain sites without using their credentials.</span></p>
 <p><span style="font-weight: 400;">For registration/login, at least one of email address or mobile is required. It is possible for a SSO user to have only email and no mobile, or vice versa or both. If the user has both email and mobile in his profile, he will be able to login using either of them as the identifier.</span></p>
-<p>&nbsp;<strong><strong>User Profile Handling</strong></strong></p>
+<p>&nbsp;</p>
+<h2><strong><strong>User Profile Handling</strong></strong></h2>
 <p><span style="font-weight: 400;">Basic user profile is taken care by SSO which includes</span></p>
 <ul>
 <li style="font-weight: 400;"><span style="font-weight: 400;">User Name :&nbsp;</span><em><span style="font-weight: 400;">first name and last name</span></em></li>
@@ -71,7 +73,8 @@
 <li style="font-weight: 400;"><span style="font-weight: 400;">User Image: &nbsp;</span><em><span style="font-weight: 400;">profile pic</span></em></li>
 <li style="font-weight: 400;"><span style="font-weight: 400;">Password:&nbsp;</span><em><span style="font-weight: 400;">User can change or update their password</span></em></li>
 </ul>
-<p><strong><strong>Global and App Session</strong></strong></p>
+<p>&nbsp;</p>
+<h2><strong><strong>Global and App Session</strong></strong></h2>
 <p><span style="font-weight: 400;">SSO will introduce global and local/App login session on the app in native version. Global session will be accessible to all the Apps of the (TIL) family while App session will be private for App. App session will identify if App is in login state, log out state, installed first time etc. Session stores following credentials:</span></p>
 <ul>
 <li><strong>tgId</strong><span style="font-weight: 400;">&nbsp;:&nbsp;</span><em><span style="font-weight: 400;">unique for a device.</span></em></li>
@@ -80,7 +83,8 @@
 <li><strong>type</strong><span style="font-weight: 400;">:&nbsp;</span><em><span style="font-weight: 400;">type of login (facebook,Google plus or sso(email/mobile))</span></em></li>
 <li><strong>identifier</strong><span style="font-weight: 400;">:&nbsp;</span><em><span style="font-weight: 400;">will be user&rsquo;s email/mobile number if login with email/mobile (i.i. sso)</span></em></li>
 </ul>
-<p><span style="font-weight: 400;">App session&rsquo;s &nbsp;</span><strong>ssec</strong><span style="font-weight: 400;">&nbsp;confirms if App is in login state. Empty&nbsp;</span><strong>type</strong><span style="font-weight: 400;">&nbsp;states no login type found i.e. App is doing login for the first time.&nbsp;</span><br /><br /><strong><strong>Pre-requisites to use Cross app SSO</strong></strong></p>
+<p><span style="font-weight: 400;">App session&rsquo;s &nbsp;</span><strong>ssec</strong><span style="font-weight: 400;">&nbsp;confirms if App is in login state. Empty&nbsp;</span><strong>type</strong><span style="font-weight: 400;">&nbsp;states no login type found i.e. App is doing login for the first time.&nbsp;</span><br /><br /></p>
+<h2><strong><strong>Pre-requisites to use Cross app SSO</strong></strong></h2>
 <p><span style="font-weight: 400;">Business needs to provide the following properties which enables the app &nbsp;to use Central created by SSO: -</span></p>
 <table style="width: 910px; margin-left: auto; margin-right: auto;">
 <tbody>
@@ -143,23 +147,24 @@
 </tr>
 </tbody>
 </table>
-<p><strong><br />&nbsp;iOS Installation</strong></p>
+<h2><strong><br />&nbsp;iOS Installation</strong></h2>
 <p><span style="font-weight: 400;">SDK can be included in project using cocoa pod. SDK is written in objective-c and can be implemented in both Objective-c and Swift projects. Facebook and Google plus pods are included externally to avoid any kind of transitive dependencies in Swift projects.&nbsp;</span><br /><strong>Pod file</strong></p>
 <p><span style="font-weight: 400;">Include following in your podfile.</span><span style="font-weight: 400;"> &nbsp;</span>&nbsp;</p>
 <p><span style="font-weight: 400;">pod 'NativeSSOLogin', :git =&gt;'https://bitbucket.org/agi_sso/nativessologin.git'</span></p>
 <p><span style="font-weight: 400;">(Warning: If you are coping above recheck the formats of symbols like &lsquo; and &rdquo;&rdquo; )</span></p>
-<p><br /><strong>&nbsp;Project Setting&nbsp;</strong></p>
+<h2><br /><strong>&nbsp;Project Setting&nbsp;</strong></h2>
 <p>&nbsp;<strong><strong>Enable Keychain&nbsp;sharing</strong></strong>&nbsp;</p>
 <p><span style="font-weight: 400;">Go to,</span></p>
 <p><span style="font-weight: 400;">Project setting &mdash;&gt; Capabilities &mdash;&gt; Keychain sharing:&nbsp;</span><span style="font-weight: 400;">ON</span></p>
 <p><span style="font-weight: 400;">keychain groups:&nbsp;</span><span style="font-weight: 400;">com.til.shared&nbsp;</span></p>
 <p><span style="font-weight: 400;">(User&rsquo;s login credentials are kept in keychain. To share credentials among various apps of same family/devTeam a group(</span><span style="font-weight: 400;">com.til.shared</span><span style="font-weight: 400;">) is created. group+teamId identify the shared keychain. Credentials stored in shared keychain are kept in encrypted form and not accessible by any third party app).</span></p>
-<p><strong>List of APIs</strong></p>
+<p>&nbsp;</p>
+<h2><strong>List of APIs</strong></h2>
 <p><span style="font-weight: 400;">typedef void (^errorBlock) (NSError * &nbsp;_Nullable error);</span></p>
 <p><span style="font-weight: 400;">typedef void (^voidBlock) (void);</span></p>
 <p><span style="font-weight: 400;">typedef void (^infoBlock) (NSDictionary *info);</span></p>
 <p><span style="font-weight: 400;">typedef void (^completionBlock) (NSDictionary * _Nullable info,NSError * _Nullable error);</span></p>
-<p><strong><strong>SDK INITIALIZATION</strong></strong></p>
+<p>&nbsp;</p>
 <table style="width: 867px; margin-left: auto; margin-right: auto;">
 <tbody>
 <tr>
@@ -207,7 +212,7 @@
 </tr>
 </tbody>
 </table>
-<p>&nbsp;<strong><strong>MIGRATE EXISTING SESSION</strong></strong></p>
+<p>&nbsp;</p>
 <table style="height: 372px; width: 867px; margin-left: auto; margin-right: auto;">
 <tbody>
 <tr>
@@ -249,7 +254,7 @@
 </tr>
 </tbody>
 </table>
-<p><strong><strong>APP SESSION</strong></strong>&nbsp;</p>
+<p>&nbsp;</p>
 <table style="width: 870px; margin-left: auto; margin-right: auto;">
 <tbody>
 <tr>
@@ -282,12 +287,12 @@
 </td>
 <td style="width: 726px;">
 <p><span style="font-weight: 400;">if&nbsp;</span><strong>type</strong><span style="font-weight: 400;">&nbsp;is empty, this is new app login</span><span style="font-weight: 400;"><br /></span><span style="font-weight: 400;"><br /></span><strong>Warning</strong><span style="font-weight: 400;">&nbsp;:&nbsp;</span><strong>Deprecated</strong></p>
-<p><span style="font-weight: 400;">New available method is &rarr;</span><span style="font-weight: 400;"><br /></span><span style="font-weight: 400;"><br /></span><span style="font-weight: 400;">-(</span><span style="font-weight: 400;">void</span><span style="font-weight: 400;">)</span><strong>getSSOAppSessionOnCompletion</strong><span style="font-weight: 400;">:(</span><span style="font-weight: 400;">sessionBlock</span><span style="font-weight: 400;">)completion;</span><span style="font-weight: 400;"><br /><br /></span></p>
+<p><span style="font-weight: 400;">New available method is &rarr;</span><span style="font-weight: 400;"><br /></span><span style="font-weight: 400;"><br /></span><span style="font-weight: 400;">-(</span><span style="font-weight: 400;">void</span><span style="font-weight: 400;">)</span><strong>getSSOAppSessionOnCompletion</strong><span style="font-weight: 400;">:(</span><span style="font-weight: 400;">sessionBlock</span><span style="font-weight: 400;">)completion;</span><span style="font-weight: 400;"><br />&nbsp;<br /></span></p>
 </td>
 </tr>
 </tbody>
 </table>
-<p><strong><strong>GLOBAL SESSION</strong></strong>&nbsp;</p>
+<p>&nbsp;</p>
 <table style="width: 873px; margin-left: auto; margin-right: auto;">
 <tbody>
 <tr>
@@ -329,7 +334,7 @@
 </tr>
 </tbody>
 </table>
-<p><strong><strong>COPY GLOBAL SESSION TO APP</strong></strong>&nbsp;</p>
+<p>&nbsp;</p>
 <table style="width: 872px; margin-left: auto; margin-right: auto;">
 <tbody>
 <tr>
@@ -367,7 +372,7 @@
 </tr>
 </tbody>
 </table>
-<p><strong><strong>LOGIN VIA EMAIL OR MOBILE</strong></strong>&nbsp;</p>
+<p>&nbsp;</p>
 <table style="width: 875px; margin-left: auto; margin-right: auto;">
 <tbody>
 <tr>
@@ -426,7 +431,7 @@
 <p><strong>Possible Error Codes:</strong></p>
 <br /><br /><br /><br /><br /><br /></td>
 <td style="width: 734px;">
-<p><span style="font-weight: 400;"><br /></span><span style="font-weight: 400;">4000</span><strong>&nbsp;:</strong><span style="font-weight: 400;">&nbsp;SDK_NOT_INITIALIZED</span><span style="font-weight: 400;"><br /></span><span style="font-weight: 400;">413 : INVALID_REQUEST</span><span style="font-weight: 400;"><br /></span><span style="font-weight: 400;">402 : INVALID_MOBILE</span><span style="font-weight: 400;"><br /></span><span style="font-weight: 400;">401 : INVALID_CHANNEL</span><span style="font-weight: 400;"><br /></span><span style="font-weight: 400;">408 : UNREGISTERED_MOBILE</span><span style="font-weight: 400;"><br /></span><span style="font-weight: 400;">406 : UNVERIFIED_MOBILE</span><span style="font-weight: 400;"><br /></span><span style="font-weight: 400;">400 : TRANSACTION_ERROR</span><span style="font-weight: 400;"><br /></span><span style="font-weight: 400;">427 : PROXY_OR_DEFUNC_EMAIL</span><span style="font-weight: 400;"><br /></span><span style="font-weight: 400;">428 : INDIATIMES_EMAIL</span><span style="font-weight: 400;"><br /></span><span style="font-weight: 400;">405 : UNVERIFIED_EMAIL</span><span style="font-weight: 400;"><br /></span><span style="font-weight: 400;">407 : UNREGISTERED_EMAIL</span><span style="font-weight: 400;"><br /></span><span style="font-weight: 400;">403 : INVALID_EMAIL</span><span style="font-weight: 400;"><br /></span><span style="font-weight: 400;">4101 : Field is not string</span>&nbsp;</p>
+<p><span style="font-weight: 400;"><br /></span><span style="font-weight: 400;">4000</span><strong>&nbsp;:</strong><span style="font-weight: 400;">&nbsp;SDK_NOT_INITIALIZED</span><span style="font-weight: 400;"><br /></span><span style="font-weight: 400;">413 : INVALID_REQUEST</span><span style="font-weight: 400;"><br /></span><span style="font-weight: 400;">402 : INVALID_MOBILE</span><span style="font-weight: 400;"><br /></span><span style="font-weight: 400;">401 : INVALID_CHANNEL</span><span style="font-weight: 400;"><br /></span><span style="font-weight: 400;">408 : UNREGISTERED_MOBILE</span><span style="font-weight: 400;"><br /></span><span style="font-weight: 400;">406 : UNVERIFIED_MOBILE</span><span style="font-weight: 400;"><br /></span><span style="font-weight: 400;">400 : TRANSACTION_ERROR</span><span style="font-weight: 400;"><br /></span><span style="font-weight: 400;">427 : PROXY_OR_DEFUNC_EMAIL</span><span style="font-weight: 400;"><br /></span><span style="font-weight: 400;">428 : INDIATIMES_EMAIL</span><span style="font-weight: 400;"><br /></span><span style="font-weight: 400;">405 : UNVERIFIED_EMAIL</span><span style="font-weight: 400;"><br /></span><span style="font-weight: 400;">407 : UNREGISTERED_EMAIL</span><span style="font-weight: 400;"><br /></span><span style="font-weight: 400;">403 : INVALID_EMAIL</span><span style="font-weight: 400;"><br /></span><span style="font-weight: 400;">4101 : Field is not string</span>&nbsp;&nbsp;</p>
 </td>
 </tr>
 </tbody>
@@ -468,7 +473,7 @@
 </tr>
 </tbody>
 </table>
-<p><strong>LOGIN USING SOCIAL INFO</strong>&nbsp;</p>
+<p>&nbsp;</p>
 <table style="margin-left: auto; margin-right: auto;">
 <tbody>
 <tr>
@@ -547,7 +552,7 @@
 </tr>
 </tbody>
 </table>
-<p><strong>REGISTER USER&nbsp;</strong>&nbsp;</p>
+<p>&nbsp;</p>
 <table style="margin-left: auto; margin-right: auto;">
 <tbody>
 <tr>
@@ -674,7 +679,7 @@
 </tr>
 </tbody>
 </table>
-<p><strong>CHANGE PASSWORD</strong></p>
+<p>&nbsp;</p>
 <table style="width: 863px; margin-left: auto; margin-right: auto;">
 <tbody>
 <tr>
@@ -707,7 +712,7 @@
 </tr>
 </tbody>
 </table>
-<p><strong>RECOVER PASSWORD</strong></p>
+<p>&nbsp;</p>
 <table style="width: 857px; margin-left: auto; margin-right: auto;">
 <tbody>
 <tr>
@@ -766,7 +771,7 @@
 <p><strong>Possible Error Codes:</strong></p>
 </td>
 <td style="width: 711px;">
-<p><span style="font-weight: 400;"><br /></span><span style="font-weight: 400;">4000</span><strong>&nbsp;:</strong><span style="font-weight: 400;">&nbsp;SDK_NOT_INITIALIZED</span><span style="font-weight: 400;"><br /></span><span style="font-weight: 400;">4101 : Field is not string&nbsp;</span><span style="font-weight: 400;"><br /></span><span style="font-weight: 400;">413 : INVALID_REQUEST</span><span style="font-weight: 400;"><br /></span><span style="font-weight: 400;">407 : UNREGISTERED_MOBILE</span><span style="font-weight: 400;"><br /></span><span style="font-weight: 400;">406 : UNVERIFIED_MOBILE</span><span style="font-weight: 400;"><br /></span><span style="font-weight: 400;">402 : INVALID_MOBILE</span><span style="font-weight: 400;"><br /></span><span style="font-weight: 400;">401 : INVALID_CHANNEL</span><span style="font-weight: 400;"><br /></span><span style="font-weight: 400;">410 : INVALID_IDENTIFIE</span></p>
+<p><span style="font-weight: 400;"><br /></span><span style="font-weight: 400;">4000</span><strong>&nbsp;:</strong><span style="font-weight: 400;">&nbsp;SDK_NOT_INITIALIZED</span><span style="font-weight: 400;"><br /></span><span style="font-weight: 400;">4101 : Field is not string&nbsp;</span><span style="font-weight: 400;"><br /></span><span style="font-weight: 400;">413 : INVALID_REQUEST</span><span style="font-weight: 400;"><br /></span><span style="font-weight: 400;">407 : UNREGISTERED_MOBILE</span><span style="font-weight: 400;"><br /></span><span style="font-weight: 400;">406 : UNVERIFIED_MOBILE</span><span style="font-weight: 400;"><br /></span><span style="font-weight: 400;">402 : INVALID_MOBILE</span><span style="font-weight: 400;"><br /></span><span style="font-weight: 400;">401 : INVALID_CHANNEL</span><span style="font-weight: 400;"><br /></span><span style="font-weight: 400;">410 : INVALID_IDENTIFIE</span>&nbsp;</p>
 </td>
 </tr>
 </tbody>
@@ -806,7 +811,7 @@
 </tr>
 </tbody>
 </table>
-<p><strong>GET USER DETAILS</strong></p>
+<p>&nbsp;</p>
 <table style="width: 852px; margin-left: auto; margin-right: auto;">
 <tbody>
 <tr>
@@ -845,7 +850,7 @@
 </tr>
 </tbody>
 </table>
-<p style="text-align: left;"><strong>SIGN OUT USER</strong></p>
+<p>&nbsp;</p>
 <table style="width: 853px; margin-left: auto; margin-right: auto;">
 <tbody>
 <tr>
@@ -875,7 +880,7 @@
 </tr>
 </tbody>
 </table>
-<p><strong>UPDATE USER DETAILS&nbsp;</strong>&nbsp;</p>
+<p>&nbsp;</p>
 <table style="width: 851px; margin-left: auto; margin-right: auto;">
 <tbody>
 <tr>
@@ -921,7 +926,7 @@
 </tr>
 </tbody>
 </table>
-<p><strong>GET STATUS FOR USER&nbsp;</strong>&nbsp;</p>
+<p>&nbsp;</p>
 <table style="width: 847px; margin-left: auto; margin-right: auto;">
 <tbody>
 <tr>
@@ -960,7 +965,7 @@
 </tr>
 </tbody>
 </table>
-<p><strong>SOCIAL LINK D-LINK</strong>&nbsp;</p>
+<p>&nbsp;</p>
 <table style="width: 843px; margin-left: auto; margin-right: auto;">
 <tbody>
 <tr>
@@ -1088,7 +1093,7 @@
 </tr>
 </tbody>
 </table>
-<p>&nbsp;<strong><strong>UPDATE MOBILE AND VERIFY MOBILE API</strong></strong></p>
+<p>&nbsp;</p>
 <table style="width: 837px; margin-left: auto; margin-right: auto;">
 <tbody>
 <tr>
@@ -1124,7 +1129,7 @@
 <p><span style="font-weight: 400;">402: &nbsp;</span>&nbsp;<span style="font-weight: 400;">INVALID_MOBILE</span></p>
 <p><span style="font-weight: 400;">432: &nbsp;</span>&nbsp;<span style="font-weight: 400;">BLOCKED_MOBILE</span></p>
 <p><span style="font-weight: 400;">433: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ALREADY_VERIFIED</span></p>
-<p><span style="font-weight: 400;">400: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;TRANSACTION_ERROR</span><span style="font-weight: 400;"><br />&nbsp;<br /></span></p>
+<p><span style="font-weight: 400;">400: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;TRANSACTION_ERROR</span><span style="font-weight: 400;"><br />&nbsp;</span></p>
 </td>
 </tr>
 </tbody>
@@ -1175,7 +1180,7 @@
 </tr>
 </tbody>
 </table>
-<p>&nbsp;<strong><strong>ADD EMAIL AND VERIFY EMAIL API</strong></strong></p>
+<p>&nbsp;</p>
 <table style="width: 835px; margin-left: auto; margin-right: auto;">
 <tbody>
 <tr>
@@ -1269,7 +1274,7 @@
 </tr>
 </tbody>
 </table>
-<p style="text-align: left;"><strong><strong>RENEW TICKET</strong></strong>&nbsp;</p>
+<p>&nbsp;</p>
 <table style="width: 832px; margin-left: auto; margin-right: auto;">
 <tbody>
 <tr>
@@ -1312,7 +1317,7 @@
 </tr>
 </tbody>
 </table>
-<p style="text-align: left;">&nbsp;<strong>IMPORT PROFILE PIC FROM SOCIAL</strong></p>
+<p>&nbsp;</p>
 <table style="width: 829px; margin-left: auto; margin-right: auto;">
 <tbody>
 <tr>
@@ -1355,7 +1360,7 @@
 </tr>
 </tbody>
 </table>
-<p style="text-align: center;"><strong>UPLOAD PROFILE PIC&nbsp;</strong>&nbsp;</p>
+<p>&nbsp;</p>
 <table style="width: 829px; margin-left: auto; margin-right: auto;">
 <tbody>
 <tr>
@@ -1402,7 +1407,6 @@
 </tbody>
 </table>
 <p style="text-align: center;"><strong>New Api&rsquo;s 2.2</strong></p>
-<p><strong>LOGIN USING SOCIAL INFO</strong></p>
 <table style="height: 743px; margin-left: auto; margin-right: auto;" width="828">
 <tbody>
 <tr>
@@ -1456,7 +1460,7 @@
 </tr>
 </tbody>
 </table>
-<p><strong>UPDATE USER DETAILS</strong></p>
+<p>&nbsp;</p>
 <table style="width: 824px; margin-left: auto; margin-right: auto;">
 <tbody>
 <tr>
@@ -1492,12 +1496,12 @@
 <td style="width: 678px;">
 <p><strong>Note:</strong><strong><br /></strong><span style="font-weight: 400;">Set user firstName, lastName, dob, gender, city properties of&nbsp;</span><span style="font-weight: 400;">userDetails object if provided.</span></p>
 <br />
-<p><span style="font-weight: 400;">V1.1.1: &nbsp;termsAccepted and ShareDataAllowed propertied added &nbsp;in SSOUserUpdates&nbsp;</span><span style="font-weight: 400;"><br /><br /></span></p>
+<p><span style="font-weight: 400;">V1.1.1: &nbsp;termsAccepted and ShareDataAllowed propertied added &nbsp;in SSOUserUpdates&nbsp;</span><span style="font-weight: 400;"><br /></span></p>
 </td>
 </tr>
 </tbody>
 </table>
-<p style="text-align: center;"><strong>REGISTER USER</strong></p>
+<p>&nbsp;</p>
 <table style="margin-left: auto; margin-right: auto;">
 <tbody>
 <tr>
@@ -1544,7 +1548,7 @@
 </tr>
 </tbody>
 </table>
-<p><strong>UPLOAD PROFILE PIC&nbsp;</strong>&nbsp;</p>
+<p>&nbsp;</p>
 <table style="width: 822px; margin-left: auto; margin-right: auto;">
 <tbody>
 <tr>
@@ -1586,7 +1590,7 @@
 </tr>
 </tbody>
 </table>
-<p><strong><strong>Create App(Local) SESSION</strong></strong></p>
+<p>&nbsp;</p>
 <table style="width: 820px; margin-left: auto; margin-right: auto;">
 <tbody>
 <tr>
@@ -1624,7 +1628,7 @@
 </tr>
 </tbody>
 </table>
-<p><strong><strong>GLOBAL SESSION</strong></strong>&nbsp;</p>
+<p>&nbsp;</p>
 <table style="width: 819px; margin-left: auto; margin-right: auto;">
 <tbody>
 <tr>
@@ -1662,7 +1666,7 @@
 </tr>
 </tbody>
 </table>
-<p style="text-align: center;"><strong>GET USER DETAILS</strong></p>
+<p>&nbsp;</p>
 <table style="width: 813px; margin-left: auto; margin-right: auto;">
 <tbody>
 <tr>
@@ -1700,7 +1704,7 @@
 </tr>
 </tbody>
 </table>
-<p><strong>GET USER DETAILS LOCAL</strong></p>
+<p>&nbsp;</p>
 <table style="margin-left: auto; margin-right: auto;">
 <tbody>
 <tr>
@@ -1742,7 +1746,7 @@
 </tr>
 </tbody>
 </table>
-<p style="text-align: center;"><strong><strong>APP SESSION</strong></strong></p>
+<p>&nbsp;</p>
 <table style="width: 807px; margin-left: auto; margin-right: auto;">
 <tbody>
 <tr>
