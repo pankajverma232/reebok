@@ -1,5 +1,6 @@
 <p><strong>&nbsp;</strong></p>
-<h1 style="text-align: center;"><strong>Cross App Native SSO Integration</strong></h1>
+<h1 style="text-align: center;"><strong>Native SSO&nbsp;Login</strong></h1>
+<p>&nbsp;</p>
 <h2><strong>Documents versions</strong><span style="font-weight: 400;">:</span></h2>
 <table style="margin-left: auto; margin-right: auto;">
 <tbody>
@@ -25,24 +26,48 @@
 </tr>
 <tr>
 <td>
-<p><span style="font-weight: 400;">Cross app Native SSO Integration_1.0.doc</span></p>
+<p><span style="font-weight: 400;">Cross app Native SSO Integration</span></p>
 </td>
 <td>
-<p><span style="font-weight: 400;">2.2</span></p>
+<p><span style="font-weight: 400;">1.0</span></p>
 </td>
 <td>
 <p><span style="font-weight: 400;">20-03-2017</span></p>
 </td>
 <td>
-<p><span style="font-weight: 400;">&nbsp;Initial version of cross app SSO Integration&nbsp;</span></p>
+<p class="p1">Initial version of cross app SSO Integration</p>
 </td>
 <td>
 <p><span style="font-weight: 400;">Amit Chouhan</span></p>
 <p><span style="font-weight: 400;">Pankaj Verma</span></p>
 </td>
 <td>
-<p><span style="font-weight: 400;">Amit Chouhan</span>&nbsp;</p>
+<p><span style="font-weight: 400;">Amit Chouhan</span></p>
+<p>&nbsp;</p>
 </td>
+</tr>
+<tr>
+<td>
+<p><span style="font-weight: 400;">Cross app Native SSO Integration</span></p>
+</td>
+<td>2.3</td>
+<td>20-03-2017</td>
+<td>
+<p>Deprecated old APIs</p>
+<p>Added new APIs</p>
+</td>
+<td>Pankaj Verma</td>
+<td>Amit Chouhan</td>
+</tr>
+<tr>
+<td>
+<p><span style="font-weight: 400;">Cross app Native SSO Integration</span></p>
+</td>
+<td>2.3</td>
+<td>12-11-2018</td>
+<td>Added Gdpr Support.</td>
+<td>Pankaj Verma</td>
+<td>&nbsp;Amit Chouhan</td>
 </tr>
 </tbody>
 </table>
@@ -1875,4 +1900,8 @@
 <p style="padding-left: 30px;"><span style="font-weight: 400;">A: &nbsp;Yes. User can logout and login with desired email.</span></p>
 <p>&nbsp;</p>
 <p><span style="font-weight: 400;">Thank you!</span></p>
+<h2 id="markdown-header-author">Author</h2>
+<p>Pankaj Verma, pankaj.verma@timesinternet.in</p>
+<h2 id="markdown-header-license">License</h2>
+<p>NativeSSOLogin is available under the MIT license. See the LICENSE file for more info.</p>
 <p>&nbsp;</p>
