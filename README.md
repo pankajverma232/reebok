@@ -46,7 +46,7 @@
 </tr>
 </tbody>
 </table>
-<h2><br /><br />&nbsp;&nbsp;&nbsp;<strong>Table of Contents&nbsp;</strong></h2>
+<h2><br /><strong>Table of Contents&nbsp;</strong></h2>
 <ul>
 <li>Introduction&nbsp;</li>
 <li><span style="font-weight: 400;">User Profile Handling</span>&nbsp;</li>
@@ -58,13 +58,13 @@
 </ul>
 <p>&nbsp;</p>
 <h2><strong>&nbsp;Introduction</strong></h2>
-<p><span style="font-weight: 400;">Cross app Native SSO Integration is an authentication system that permits a user to login with email/ mobile and password/OTP on a single app and get auto login on across the Times network with cross app SSO integration.</span></p>
-<p><span style="font-weight: 400;">SSO - Single Sign On centrally manages the authentication of users across the Times network. SSO handles both the sub domain and cross domain login.</span></p>
-<p><span style="font-weight: 400;">It allows users to connect over cross domain sites without using their credentials.</span></p>
-<p><span style="font-weight: 400;">For registration/login, at least one of email address or mobile is required. It is possible for a SSO user to have only email and no mobile, or vice versa or both. If the user has both email and mobile in his profile, he will be able to login using either of them as the identifier.</span></p>
-<p>&nbsp;</p>
+<p style="padding-left: 30px;"><span style="font-weight: 400;">Cross app Native SSO Integration is an authentication system that permits a user to login with email/ mobile and password/OTP on a single app and get auto login on across the Times network with cross app SSO integration.</span></p>
+<p style="padding-left: 30px;"><span style="font-weight: 400;">SSO - Single Sign On centrally manages the authentication of users across the Times network. SSO handles both the sub domain and cross domain login.</span></p>
+<p style="padding-left: 30px;"><span style="font-weight: 400;">It allows users to connect over cross domain sites without using their credentials.</span></p>
+<p style="padding-left: 30px;"><span style="font-weight: 400;">For registration/login, at least one of email address or mobile is required. It is possible for a SSO user to have only email and no mobile, or vice versa or both. If the user has both email and mobile in his profile, he will be able to login using either of them as the identifier.</span></p>
+<p style="padding-left: 30px;">&nbsp;</p>
 <h2><strong><strong>User Profile Handling</strong></strong></h2>
-<p><span style="font-weight: 400;">Basic user profile is taken care by SSO which includes</span></p>
+<p style="padding-left: 30px;"><span style="font-weight: 400;">Basic user profile is taken care by SSO which includes</span></p>
 <ul>
 <li style="font-weight: 400;"><span style="font-weight: 400;"><strong>User Name</strong>:&nbsp;</span><em><span style="font-weight: 400;">first name and last name</span></em></li>
 <li style="font-weight: 400;"><strong>Date of birth</strong></li>
@@ -77,7 +77,7 @@
 </ul>
 <p>&nbsp;</p>
 <h2><strong><strong>Global and App Session</strong></strong></h2>
-<p><span style="font-weight: 400;">SSO will introduce global and local/App login session on the app in native version. Global session will be accessible to all the Apps of the (TIL) family while App session will be private for App. App session will identify if App is in login state, log out state, installed first time etc. Session stores following credentials:</span></p>
+<p style="padding-left: 30px;"><span style="font-weight: 400;">SSO will introduce global and local/App login session on the app in native version. Global session will be accessible to all the Apps of the (TIL) family while App session will be private for App. App session will identify if App is in login state, log out state, installed first time etc. Session stores following credentials:</span></p>
 <ul>
 <li><strong>tgId</strong><span style="font-weight: 400;">&nbsp;:&nbsp;</span><em><span style="font-weight: 400;">unique for a device.</span></em></li>
 <li><strong>ssec</strong><span style="font-weight: 400;">:&nbsp;</span><em><span style="font-weight: 400;">encrypted form of ssoid</span></em></li>
@@ -85,9 +85,9 @@
 <li><strong>type</strong><span style="font-weight: 400;">:&nbsp;</span><em><span style="font-weight: 400;">type of login (facebook,Google plus or sso(email/mobile))</span></em></li>
 <li><strong>identifier</strong><span style="font-weight: 400;">:&nbsp;</span><em><span style="font-weight: 400;">will be user&rsquo;s email/mobile number if login with email/mobile (i.i. sso)</span></em></li>
 </ul>
-<p><span style="font-weight: 400;">App session&rsquo;s &nbsp;</span><strong>ssec</strong><span style="font-weight: 400;">&nbsp;confirms if App is in login state. Empty&nbsp;</span><strong>type</strong><span style="font-weight: 400;">&nbsp;states no login type found i.e. App is doing login for the first time.&nbsp;</span><br /><br /></p>
+<p style="padding-left: 30px;"><span style="font-weight: 400;">App session&rsquo;s &nbsp;</span><strong>ssec</strong><span style="font-weight: 400;">&nbsp;confirms if App is in login state. Empty&nbsp;</span><strong>type</strong><span style="font-weight: 400;">&nbsp;states no login type found i.e. App is doing login for the first time.&nbsp;</span><br /><br /></p>
 <h2><strong><strong>Pre-requisites to use Cross app SSO</strong></strong></h2>
-<p><span style="font-weight: 400;">Business needs to provide the following properties which enables the app &nbsp;to use Central created by SSO: -</span></p>
+<p style="padding-left: 30px;"><span style="font-weight: 400;">Business needs to provide the following properties which enables the app &nbsp;to use Central created by SSO: -</span></p>
 <table style="width: 910px; margin-left: auto; margin-right: auto;">
 <tbody>
 <tr>
@@ -150,23 +150,23 @@
 </tbody>
 </table>
 <h2><strong><br />&nbsp;iOS Installation</strong></h2>
-<p><span style="font-weight: 400;">SDK can be included in project using cocoa pod. SDK is written in objective-c and can be implemented in both Objective-c and Swift projects. Facebook and Google plus pods are included externally to avoid any kind of transitive dependencies in Swift projects.&nbsp;</span><br /><strong>Pod file</strong></p>
-<p><span style="font-weight: 400;">Include following in your podfile.</span><span style="font-weight: 400;"> &nbsp;</span>&nbsp;</p>
-<p><span style="font-weight: 400;">pod 'NativeSSOLogin', :git =&gt;'https://bitbucket.org/agi_sso/nativessologin.git'</span></p>
-<p><span style="font-weight: 400;">(Warning: If you are coping above recheck the formats of symbols like &lsquo; and &rdquo;&rdquo; )</span></p>
-<h2><br /><strong>&nbsp;Project Setting&nbsp;</strong></h2>
-<p>&nbsp;<strong><strong>Enable Keychain&nbsp;sharing</strong></strong>&nbsp;</p>
-<p><span style="font-weight: 400;">Go to,</span></p>
-<p><span style="font-weight: 400;">Project setting &mdash;&gt; Capabilities &mdash;&gt; Keychain sharing:&nbsp;</span><span style="font-weight: 400; color: #ff0000;">ON</span></p>
-<p><span style="font-weight: 400;">keychain groups:&nbsp;</span><strong>com.til.shared&nbsp;</strong></p>
-<p><span style="font-weight: 400;">(User&rsquo;s login credentials are kept in keychain. To share credentials among various apps of same family/devTeam a group(</span><span style="font-weight: 400;">com.til.shared</span><span style="font-weight: 400;">) is created. group+teamId identify the shared keychain. Credentials stored in shared keychain are kept in encrypted form and not accessible by any third party app).</span></p>
-<p>&nbsp;</p>
+<p style="padding-left: 30px;"><span style="font-weight: 400;">SDK can be included in project using cocoa pod. SDK is written in objective-c and can be implemented in both Objective-c and Swift projects. Facebook and Google plus pods are included externally to avoid any kind of transitive dependencies in Swift projects.&nbsp;</span><br /><strong>Pod file</strong></p>
+<p style="padding-left: 30px;"><span style="font-weight: 400;">Include following in your podfile.</span><span style="font-weight: 400;"> &nbsp;</span>&nbsp;</p>
+<p style="padding-left: 30px;"><span style="font-weight: 400;">pod 'NativeSSOLogin', :git =&gt;'https://bitbucket.org/agi_sso/nativessologin.git'</span></p>
+<p style="padding-left: 30px;"><span style="font-weight: 400;">(Warning: If you are coping above recheck the formats of symbols like &lsquo; and &rdquo;&rdquo; )</span></p>
+<h2 style="text-align: left;"><br /><strong>&nbsp;Project Setting&nbsp;</strong></h2>
+<p style="padding-left: 30px;">&nbsp;<strong><strong>Enable Keychain&nbsp;sharing</strong></strong>&nbsp;</p>
+<p style="padding-left: 30px;"><span style="font-weight: 400;">Go to,</span></p>
+<p style="padding-left: 30px;"><span style="font-weight: 400;">Project setting &mdash;&gt; Capabilities &mdash;&gt; Keychain sharing:&nbsp;</span><span style="font-weight: 400; color: #ff0000;">ON</span></p>
+<p style="padding-left: 30px;"><span style="font-weight: 400;">keychain groups:&nbsp;</span><strong>com.til.shared&nbsp;</strong></p>
+<p style="padding-left: 30px;"><span style="font-weight: 400;">(User&rsquo;s login credentials are kept in keychain. To share credentials among various apps of same family/devTeam a group(</span><span style="font-weight: 400;">com.til.shared</span><span style="font-weight: 400;">) is created. group+teamId identify the shared keychain. Credentials stored in shared keychain are kept in encrypted form and not accessible by any third party app).</span></p>
+<p style="padding-left: 30px;">&nbsp;</p>
 <h2><strong>List of APIs</strong></h2>
-<p><span style="font-weight: 400;">typedef void (^errorBlock) (NSError * &nbsp;_Nullable error);</span></p>
-<p><span style="font-weight: 400;">typedef void (^voidBlock) (void);</span></p>
-<p><span style="font-weight: 400;">typedef void (^infoBlock) (NSDictionary *info);</span></p>
-<p><span style="font-weight: 400;">typedef void (^completionBlock) (NSDictionary * _Nullable info,NSError * _Nullable error);</span></p>
-<p>&nbsp;</p>
+<p style="padding-left: 30px;"><span style="font-weight: 400;">typedef void (^errorBlock) (NSError * &nbsp;_Nullable error);</span></p>
+<p style="padding-left: 30px;"><span style="font-weight: 400;">typedef void (^voidBlock) (void);</span></p>
+<p style="padding-left: 30px;"><span style="font-weight: 400;">typedef void (^infoBlock) (NSDictionary *info);</span></p>
+<p style="padding-left: 30px;"><span style="font-weight: 400;">typedef void (^completionBlock) (NSDictionary * _Nullable info,NSError * _Nullable error);</span></p>
+<p style="padding-left: 30px;">&nbsp;</p>
 <table style="width: 867px; margin-left: auto; margin-right: auto;">
 <tbody>
 <tr>
@@ -433,7 +433,7 @@
 <p><strong>Possible Error Codes:</strong></p>
 <br /><br /><br /><br /><br /><br /></td>
 <td style="width: 734px;">
-<p><span style="font-weight: 400;"><br /></span><span style="font-weight: 400;">4000</span><strong>&nbsp;:</strong><span style="font-weight: 400;">&nbsp;SDK_NOT_INITIALIZED</span><span style="font-weight: 400;"><br /></span><span style="font-weight: 400;">413 : INVALID_REQUEST</span><span style="font-weight: 400;"><br /></span><span style="font-weight: 400;">402 : INVALID_MOBILE</span><span style="font-weight: 400;"><br /></span><span style="font-weight: 400;">401 : INVALID_CHANNEL</span><span style="font-weight: 400;"><br /></span><span style="font-weight: 400;">408 : UNREGISTERED_MOBILE</span><span style="font-weight: 400;"><br /></span><span style="font-weight: 400;">406 : UNVERIFIED_MOBILE</span><span style="font-weight: 400;"><br /></span><span style="font-weight: 400;">400 : TRANSACTION_ERROR</span><span style="font-weight: 400;"><br /></span><span style="font-weight: 400;">427 : PROXY_OR_DEFUNC_EMAIL</span><span style="font-weight: 400;"><br /></span><span style="font-weight: 400;">428 : INDIATIMES_EMAIL</span><span style="font-weight: 400;"><br /></span><span style="font-weight: 400;">405 : UNVERIFIED_EMAIL</span><span style="font-weight: 400;"><br /></span><span style="font-weight: 400;">407 : UNREGISTERED_EMAIL</span><span style="font-weight: 400;"><br /></span><span style="font-weight: 400;">403 : INVALID_EMAIL</span><span style="font-weight: 400;"><br /></span><span style="font-weight: 400;">4101 : Field is not string</span>&nbsp;&nbsp;</p>
+<p><span style="font-weight: 400;">4000</span><strong>&nbsp;:</strong><span style="font-weight: 400;">&nbsp;SDK_NOT_INITIALIZED</span><span style="font-weight: 400;"><br /></span><span style="font-weight: 400;">413 : INVALID_REQUEST</span><span style="font-weight: 400;"><br /></span><span style="font-weight: 400;">402 : INVALID_MOBILE</span><span style="font-weight: 400;"><br /></span><span style="font-weight: 400;">401 : INVALID_CHANNEL</span><span style="font-weight: 400;"><br /></span><span style="font-weight: 400;">408 : UNREGISTERED_MOBILE</span><span style="font-weight: 400;"><br /></span><span style="font-weight: 400;">406 : UNVERIFIED_MOBILE</span><span style="font-weight: 400;"><br /></span><span style="font-weight: 400;">400 : TRANSACTION_ERROR</span><span style="font-weight: 400;"><br /></span><span style="font-weight: 400;">427 : PROXY_OR_DEFUNC_EMAIL</span><span style="font-weight: 400;"><br /></span><span style="font-weight: 400;">428 : INDIATIMES_EMAIL</span><span style="font-weight: 400;"><br /></span><span style="font-weight: 400;">405 : UNVERIFIED_EMAIL</span><span style="font-weight: 400;"><br /></span><span style="font-weight: 400;">407 : UNREGISTERED_EMAIL</span><span style="font-weight: 400;"><br /></span><span style="font-weight: 400;">403 : INVALID_EMAIL</span><span style="font-weight: 400;"><br /></span><span style="font-weight: 400;">4101 : Field is not string</span>&nbsp;&nbsp;</p>
 </td>
 </tr>
 </tbody>
@@ -453,7 +453,7 @@
 <td style="width: 132px; height: 170px;">
 <p><strong>API Signature:</strong></p>
 </td>
-<td style="width: 736px; height: 170px;"><br />
+<td style="width: 736px; height: 170px;">
 <p><span style="font-weight: 400;">-(void)</span><strong>verifyLoginOtpPassword</strong><span style="font-weight: 400;">: (NSString *)password</span></p>
 <p><span style="font-weight: 400;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><strong>email</strong><span style="font-weight: 400;">: (NSString *)email</span></p>
 <p><span style="font-weight: 400;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><strong>mobile</strong><span style="font-weight: 400;">: (NSString *)mobile</span></p>
@@ -505,10 +505,6 @@
 <p><span style="font-weight: 400;">4105 : OAUTH_SITE_ID_NOT_FOUND</span></p>
 <p><span style="font-weight: 400;">4106 : ACCESS_TOKEN_NOT_FOUND</span></p>
 </td>
-</tr>
-<tr>
-<td>&nbsp;</td>
-<td>&nbsp;</td>
 </tr>
 <tr>
 <td>
@@ -629,14 +625,14 @@
 <p><span style="font-weight: 400;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><strong>mobile</strong><span style="font-weight: 400;">: (NSString *)mobile</span></p>
 <p><span style="font-weight: 400;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><strong>success</strong><span style="font-weight: 400;">: (voidBlock)success</span></p>
 <p><span style="font-weight: 400;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><strong>failure</strong><span style="font-weight: 400;">: (errorBlock)failure;</span></p>
-<br /><br /></td>
+</td>
 </tr>
 <tr>
 <td style="width: 132px;">
 <p><strong>Possible Error Codes:</strong></p>
 <br /><br /></td>
 <td style="width: 724px;">
-<p><span style="font-weight: 400;"><br /></span><span style="font-weight: 400;">4000</span><strong>&nbsp;:</strong><span style="font-weight: 400;">&nbsp;SDK_NOT_INITIALIZED</span><span style="font-weight: 400;"><br /></span><span style="font-weight: 400;">413 : INVALID_REQUEST</span><span style="font-weight: 400;"><br /></span><span style="font-weight: 400;">424 : INVALID_OTP</span><span style="font-weight: 400;"><br /></span><span style="font-weight: 400;">403 : INVALID_EMAIL</span><span style="font-weight: 400;"><br /></span><span style="font-weight: 400;">402 : INVALID_MOBILE</span><span style="font-weight: 400;"><br /></span><span style="font-weight: 400;">429 : ALREADY_REGISTERED_USER</span><span style="font-weight: 400;"><br /></span><span style="font-weight: 400;">416 : LIMIT_EXCEEDED</span><span style="font-weight: 400;"><br /></span><span style="font-weight: 400;">414 : WRONG_OTP</span><span style="font-weight: 400;"><br /></span><span style="font-weight: 400;">400 : TRANSACTION_ERROR</span><span style="font-weight: 400;"><br /></span><span style="font-weight: 400;">401 : INVALID_CHANNEL</span><span style="font-weight: 400;"><br /></span><span style="font-weight: 400;">415 : EXPIRED_OTP</span><span style="font-weight: 400;"><br /></span><span style="font-weight: 400;">4101 : Field is not string&nbsp;</span><span style="font-weight: 400;"><br /><br /></span></p>
+<p><span style="font-weight: 400;">4000</span><strong>&nbsp;:</strong><span style="font-weight: 400;">&nbsp;SDK_NOT_INITIALIZED</span><span style="font-weight: 400;"><br /></span><span style="font-weight: 400;">413 : INVALID_REQUEST</span><span style="font-weight: 400;"><br /></span><span style="font-weight: 400;">424 : INVALID_OTP</span><span style="font-weight: 400;"><br /></span><span style="font-weight: 400;">403 : INVALID_EMAIL</span><span style="font-weight: 400;"><br /></span><span style="font-weight: 400;">402 : INVALID_MOBILE</span><span style="font-weight: 400;"><br /></span><span style="font-weight: 400;">429 : ALREADY_REGISTERED_USER</span><span style="font-weight: 400;"><br /></span><span style="font-weight: 400;">416 : LIMIT_EXCEEDED</span><span style="font-weight: 400;"><br /></span><span style="font-weight: 400;">414 : WRONG_OTP</span><span style="font-weight: 400;"><br /></span><span style="font-weight: 400;">400 : TRANSACTION_ERROR</span><span style="font-weight: 400;"><br /></span><span style="font-weight: 400;">401 : INVALID_CHANNEL</span><span style="font-weight: 400;"><br /></span><span style="font-weight: 400;">415 : EXPIRED_OTP</span><span style="font-weight: 400;"><br /></span><span style="font-weight: 400;">4101 : Field is not string&nbsp;</span><span style="font-weight: 400;"><br /></span></p>
 </td>
 </tr>
 <tr>
@@ -664,7 +660,7 @@
 <td style="width: 132px;">
 <p><strong>API Signature:</strong></p>
 </td>
-<td style="width: 720px;"><br />
+<td style="width: 720px;">
 <p><span style="font-weight: 400;">-(void)</span><strong>resendSignUpOtpForEmail</strong><span style="font-weight: 400;">: (NSString *)email</span></p>
 <p><span style="font-weight: 400;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><strong>mobile</strong><span style="font-weight: 400;">: (NSString *)mobile</span></p>
 <p><span style="font-weight: 400;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><strong>success</strong><span style="font-weight: 400;">: (voidBlock)success</span></p>
@@ -702,14 +698,14 @@
 <p><span style="font-weight: 400;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><strong>confirmPassword</strong><span style="font-weight: 400;">: (NSString *)confirmPassword</span></p>
 <p><span style="font-weight: 400;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><strong>success</strong><span style="font-weight: 400;">: (voidBlock)success</span></p>
 <p><span style="font-weight: 400;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><strong>failure</strong><span style="font-weight: 400;">: (errorBlock)failure;</span></p>
-<br /><br /></td>
+</td>
 </tr>
 <tr>
 <td style="width: 132px;">
 <p><strong>Possible Error Codes:</strong></p>
 <br /><br /><br /></td>
 <td style="width: 717px;">
-<p><span style="font-weight: 400;"><br /></span><span style="font-weight: 400;">4000</span><strong>&nbsp;:</strong><span style="font-weight: 400;">&nbsp;SDK_NOT_INITIALIZED</span><span style="font-weight: 400;"><br /></span><span style="font-weight: 400;">401 : INVALID_CHANNEL</span><span style="font-weight: 400;"><br /></span><span style="font-weight: 400;">404 : UNAUTHORIZED_ACCESS</span><span style="font-weight: 400;"><br /></span><span style="font-weight: 400;">413 : INVALID_REQUEST</span><span style="font-weight: 400;"><br /></span><span style="font-weight: 400;">417 : INVALID_PASSWORD</span><span style="font-weight: 400;"><br /></span><span style="font-weight: 400;">418 : PASSWORD_MATCHES_LAST_THREE</span><span style="font-weight: 400;"><br /></span><span style="font-weight: 400;">419 : WRONG_PASSWORD</span><span style="font-weight: 400;"><br /></span><span style="font-weight: 400;">400 : TRANSACTION_ERROR</span><span style="font-weight: 400;"><br /></span><span style="font-weight: 400;">4101 : Field is not string</span></p>
+<p><span style="font-weight: 400;">4000</span><strong>&nbsp;:</strong><span style="font-weight: 400;">&nbsp;SDK_NOT_INITIALIZED</span><span style="font-weight: 400;"><br /></span><span style="font-weight: 400;">401 : INVALID_CHANNEL</span><span style="font-weight: 400;"><br /></span><span style="font-weight: 400;">404 : UNAUTHORIZED_ACCESS</span><span style="font-weight: 400;"><br /></span><span style="font-weight: 400;">413 : INVALID_REQUEST</span><span style="font-weight: 400;"><br /></span><span style="font-weight: 400;">417 : INVALID_PASSWORD</span><span style="font-weight: 400;"><br /></span><span style="font-weight: 400;">418 : PASSWORD_MATCHES_LAST_THREE</span><span style="font-weight: 400;"><br /></span><span style="font-weight: 400;">419 : WRONG_PASSWORD</span><span style="font-weight: 400;"><br /></span><span style="font-weight: 400;">400 : TRANSACTION_ERROR</span><span style="font-weight: 400;"><br /></span><span style="font-weight: 400;">4101 : Field is not string</span></p>
 </td>
 </tr>
 </tbody>
@@ -741,39 +737,39 @@
 <p><strong>Possible Error Codes:</strong></p>
 </td>
 <td style="width: 711px;">
-<p><span style="font-weight: 400;"><br /></span><span style="font-weight: 400;">4000</span><strong>&nbsp;:</strong><span style="font-weight: 400;">&nbsp;SDK_NOT_INITIALIZED</span><span style="font-weight: 400;"><br /></span><span style="font-weight: 400;">408 : UNREGISTERED_MOBILE</span><span style="font-weight: 400;"><br /></span><span style="font-weight: 400;">406 : UNVERIFIED_MOBILE</span><span style="font-weight: 400;"><br /></span><span style="font-weight: 400;">402 : INVALID_MOBILE</span><span style="font-weight: 400;"><br /></span><span style="font-weight: 400;">410 : INVALID_IDENTIFIER</span><span style="font-weight: 400;"><br /></span><span style="font-weight: 400;">411 : TOKEN_GENERATION_ERROR</span><span style="font-weight: 400;"><br /></span><span style="font-weight: 400;">412 : SMS_FAILURE</span><span style="font-weight: 400;"><br /></span><span style="font-weight: 400;">401 : INVALID_CHANNEL</span><span style="font-weight: 400;"><br /></span><span style="font-weight: 400;">4101 : Field is not string</span></p>
+<p><span style="font-weight: 400;">4000</span><strong>&nbsp;:</strong><span style="font-weight: 400;">&nbsp;SDK_NOT_INITIALIZED</span><span style="font-weight: 400;"><br /></span><span style="font-weight: 400;">408 : UNREGISTERED_MOBILE</span><span style="font-weight: 400;"><br /></span><span style="font-weight: 400;">406 : UNVERIFIED_MOBILE</span><span style="font-weight: 400;"><br /></span><span style="font-weight: 400;">402 : INVALID_MOBILE</span><span style="font-weight: 400;"><br /></span><span style="font-weight: 400;">410 : INVALID_IDENTIFIER</span><span style="font-weight: 400;"><br /></span><span style="font-weight: 400;">411 : TOKEN_GENERATION_ERROR</span><span style="font-weight: 400;"><br /></span><span style="font-weight: 400;">412 : SMS_FAILURE</span><span style="font-weight: 400;"><br /></span><span style="font-weight: 400;">401 : INVALID_CHANNEL</span><span style="font-weight: 400;"><br /></span><span style="font-weight: 400;">4101 : Field is not string</span></p>
 </td>
 </tr>
 </tbody>
 </table>
 <p>&nbsp;</p>
-<table style="width: 855px; margin-left: auto; margin-right: auto;">
+<table style="width: 853px; margin-left: auto; margin-right: auto;">
 <tbody>
 <tr>
-<td style="width: 132px;">
+<td style="width: 132.5px;">
 <p><strong>API Name</strong></p>
 </td>
-<td style="width: 711px;">
+<td style="width: 710.5px;">
 <p><span style="font-weight: 400;">RESEND FP OTP</span></p>
 </td>
 </tr>
 <tr>
-<td style="width: 132px;">
+<td style="width: 132.5px;">
 <p><strong>API Signature:</strong></p>
 </td>
-<td style="width: 711px;">
+<td style="width: 710.5px;">
 <p><span style="font-weight: 400;">-(void)</span><strong>resendForgotPasswordOTPForEmail</strong><span style="font-weight: 400;">: (NSString *)email</span></p>
 <p><span style="font-weight: 400;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><strong>mobile</strong><span style="font-weight: 400;">: (NSString *)mobile</span></p>
 <p><span style="font-weight: 400;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><strong>success</strong><span style="font-weight: 400;">: (voidBlock)success</span></p>
 <p><span style="font-weight: 400;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><strong>failure</strong><span style="font-weight: 400;">: (errorBlock)failure;</span></p>
-<br /><br /></td>
+</td>
 </tr>
 <tr>
-<td style="width: 132px;">
+<td style="width: 132.5px;">
 <p><strong>Possible Error Codes:</strong></p>
 </td>
-<td style="width: 711px;">
-<p><span style="font-weight: 400;"><br /></span><span style="font-weight: 400;">4000</span><strong>&nbsp;:</strong><span style="font-weight: 400;">&nbsp;SDK_NOT_INITIALIZED</span><span style="font-weight: 400;"><br /></span><span style="font-weight: 400;">4101 : Field is not string&nbsp;</span><span style="font-weight: 400;"><br /></span><span style="font-weight: 400;">413 : INVALID_REQUEST</span><span style="font-weight: 400;"><br /></span><span style="font-weight: 400;">407 : UNREGISTERED_MOBILE</span><span style="font-weight: 400;"><br /></span><span style="font-weight: 400;">406 : UNVERIFIED_MOBILE</span><span style="font-weight: 400;"><br /></span><span style="font-weight: 400;">402 : INVALID_MOBILE</span><span style="font-weight: 400;"><br /></span><span style="font-weight: 400;">401 : INVALID_CHANNEL</span><span style="font-weight: 400;"><br /></span><span style="font-weight: 400;">410 : INVALID_IDENTIFIE</span>&nbsp;</p>
+<td style="width: 710.5px;">
+<p><span style="font-weight: 400;">4000</span><strong>&nbsp;:</strong><span style="font-weight: 400;">&nbsp;SDK_NOT_INITIALIZED</span><span style="font-weight: 400;"><br /></span><span style="font-weight: 400;">4101 : Field is not string&nbsp;</span><span style="font-weight: 400;"><br /></span><span style="font-weight: 400;">413 : INVALID_REQUEST</span><span style="font-weight: 400;"><br /></span><span style="font-weight: 400;">407 : UNREGISTERED_MOBILE</span><span style="font-weight: 400;"><br /></span><span style="font-weight: 400;">406 : UNVERIFIED_MOBILE</span><span style="font-weight: 400;"><br /></span><span style="font-weight: 400;">402 : INVALID_MOBILE</span><span style="font-weight: 400;"><br /></span><span style="font-weight: 400;">401 : INVALID_CHANNEL</span><span style="font-weight: 400;"><br /></span><span style="font-weight: 400;">410 : INVALID_IDENTIFIE</span>&nbsp;</p>
 </td>
 </tr>
 </tbody>
@@ -807,7 +803,7 @@
 <td style="width: 132px;">
 <p><strong>Possible Error Codes:</strong></p>
 </td>
-<td style="width: 708px;"><br />
+<td style="width: 708px;">
 <p><span style="font-weight: 400;">4000</span><strong>&nbsp;:</strong><span style="font-weight: 400;">&nbsp;SDK_NOT_INITIALIZED</span><span style="font-weight: 400;"><br /></span><span style="font-weight: 400;">4101 : Field is not string&nbsp;</span><span style="font-weight: 400;"><br /></span><span style="font-weight: 400;">413 : INVALID_REQUEST</span><span style="font-weight: 400;"><br /></span><span style="font-weight: 400;">417 : INVALID_PASSWORD</span><span style="font-weight: 400;"><br /></span><span style="font-weight: 400;">418 : PASSWORD_MATCHES_LAST_THREE</span><span style="font-weight: 400;"><br /></span><span style="font-weight: 400;">419 : WRONG_PASSWORD</span><span style="font-weight: 400;"><br /></span><span style="font-weight: 400;">400 : TRANSACTION_ERROR</span></p>
 </td>
 </tr>
@@ -828,7 +824,7 @@
 <td style="width: 132px;">
 <p><strong>API Signature:&nbsp;</strong><strong><br /><br /></strong></p>
 </td>
-<td style="width: 706px;"><br />
+<td style="width: 706px;">
 <p><span style="font-weight: 400;">-(</span><span style="font-weight: 400;">void</span><span style="font-weight: 400;">)</span><strong>getUserDetails</strong><span style="font-weight: 400;">:(</span><span style="font-weight: 400;">void</span><span style="font-weight: 400;">(^)(</span><span style="font-weight: 400;">NSDictionary</span><span style="font-weight: 400;">&nbsp;*info))success</span></p>
 <p><span style="font-weight: 400;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;failure:(</span><span style="font-weight: 400;">void</span><span style="font-weight: 400;">(^)(</span><span style="font-weight: 400;">NSError</span><span style="font-weight: 400;">&nbsp;*&nbsp;</span><span style="font-weight: 400;">_Nullable</span><span style="font-weight: 400;">&nbsp;error))failure;</span></p>
 </td>
@@ -838,16 +834,16 @@
 <p><strong>Possible Error Codes:</strong></p>
 </td>
 <td style="width: 706px;">
-<p><span style="font-weight: 400;"><br /></span><span style="font-weight: 400;">4000</span><strong>&nbsp;:</strong><span style="font-weight: 400;">&nbsp;SDK_NOT_INITIALIZED</span><span style="font-weight: 400;"><br /></span><span style="font-weight: 400;">401 : INVALID_CHANNEL</span><span style="font-weight: 400;"><br /></span><span style="font-weight: 400;">404 : UNAUTHORIZED_ACCESS</span></p>
+<p><span style="font-weight: 400;">4000</span><strong>&nbsp;:</strong><span style="font-weight: 400;">&nbsp;SDK_NOT_INITIALIZED</span><span style="font-weight: 400;"><br /></span><span style="font-weight: 400;">401 : INVALID_CHANNEL</span><span style="font-weight: 400;"><br /></span><span style="font-weight: 400;">404 : UNAUTHORIZED_ACCESS</span></p>
 </td>
 </tr>
 <tr>
 <td style="width: 132px;">
 <p><strong>Special Instruction</strong><strong><br /></strong><strong><br /></strong><strong><br /><br /></strong></p>
 </td>
-<td style="width: 706px;"><br />
+<td style="width: 706px;">
 <p><strong>Warning</strong><span style="font-weight: 400;">&nbsp;:&nbsp;</span><strong>Deprecated</strong></p>
-<p><span style="font-weight: 400;">New available method is &rarr;</span><span style="font-weight: 400;"><br /></span><span style="font-weight: 400;"><br /></span><span style="font-weight: 400;">-(</span><span style="font-weight: 400;">void</span><span style="font-weight: 400;">)</span><strong>getUserDetailsOnCompletion</strong><span style="font-weight: 400;">:(</span><span style="font-weight: 400;">userDetailsBlock</span><span style="font-weight: 400;">)completion;</span><span style="font-weight: 400;"><br /><br /></span></p>
+<p><span style="font-weight: 400;">New available method is &rarr;</span><span style="font-weight: 400;"><br /></span><span style="font-weight: 400;"><br /></span><span style="font-weight: 400;">-(</span><span style="font-weight: 400;">void</span><span style="font-weight: 400;">)</span><strong>getUserDetailsOnCompletion</strong><span style="font-weight: 400;">:(</span><span style="font-weight: 400;">userDetailsBlock</span><span style="font-weight: 400;">)completion;</span><span style="font-weight: 400;"><br /></span></p>
 </td>
 </tr>
 </tbody>
@@ -877,7 +873,7 @@
 <p><strong>Possible Error Codes:</strong></p>
 </td>
 <td style="width: 707px;">
-<p><span style="font-weight: 400;"><br /></span><span style="font-weight: 400;">4000</span><strong>&nbsp;:</strong><span style="font-weight: 400;">&nbsp;SDK_NOT_INITIALIZED</span><span style="font-weight: 400;"><br /></span><span style="font-weight: 400;">401 : INVALID_CHANNEL</span><span style="font-weight: 400;"><br /></span><span style="font-weight: 400;">413 : INVALID_REQUEST</span><span style="font-weight: 400;"><br /></span><span style="font-weight: 400;">400 : TRANSACTION_ERROR</span></p>
+<p><span style="font-weight: 400;">4000</span><strong>&nbsp;:</strong><span style="font-weight: 400;">&nbsp;SDK_NOT_INITIALIZED</span><span style="font-weight: 400;"><br /></span><span style="font-weight: 400;">401 : INVALID_CHANNEL</span><span style="font-weight: 400;"><br /></span><span style="font-weight: 400;">413 : INVALID_REQUEST</span><span style="font-weight: 400;"><br /></span><span style="font-weight: 400;">400 : TRANSACTION_ERROR</span></p>
 </td>
 </tr>
 </tbody>
@@ -911,7 +907,7 @@
 <p><strong>Possible Error Codes:</strong></p>
 </td>
 <td style="width: 705px;">
-<p><span style="font-weight: 400;"><br /></span><span style="font-weight: 400;">4000</span><strong>&nbsp;:</strong><span style="font-weight: 400;">&nbsp;SDK_NOT_INITIALIZED</span><span style="font-weight: 400;"><br /></span><span style="font-weight: 400;">4101 : Field is not string&nbsp;</span><span style="font-weight: 400;"><br /></span><span style="font-weight: 400;">413 : INVALID_REQUEST</span><span style="font-weight: 400;"><br /></span><span style="font-weight: 400;">400 : TRANSACTION_ERROR</span></p>
+<p><span style="font-weight: 400;">4000</span><strong>&nbsp;:</strong><span style="font-weight: 400;">&nbsp;SDK_NOT_INITIALIZED</span><span style="font-weight: 400;"><br /></span><span style="font-weight: 400;">4101 : Field is not string&nbsp;</span><span style="font-weight: 400;"><br /></span><span style="font-weight: 400;">413 : INVALID_REQUEST</span><span style="font-weight: 400;"><br /></span><span style="font-weight: 400;">400 : TRANSACTION_ERROR</span></p>
 </td>
 </tr>
 <tr>
@@ -923,7 +919,7 @@
 <p><span style="font-weight: 400;">New available method is &rarr;</span><span style="font-weight: 400;"><br /></span><span style="font-weight: 400;"><br /></span><span style="font-weight: 400;">-(void)</span><strong>updateUserDetails</strong><span style="font-weight: 400;">:(SSOUserUpdates *)userDetails</span></p>
 <p><span style="font-weight: 400;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;success:(userUpdatesBlock)success</span></p>
 <p><span style="font-weight: 400;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;failure:(errorBlock)failure;</span></p>
-<p><span style="font-weight: 400;">Note :&nbsp;</span><span style="font-weight: 400;"><br /></span><span style="font-weight: 400;">Set&nbsp;</span><strong>userDetails</strong><span style="font-weight: 400;">&nbsp;object properties before calling the API,</span><span style="font-weight: 400;"><br /><br /></span></p>
+<p><span style="font-weight: 400;">Note :&nbsp;</span><span style="font-weight: 400;"><br /></span><span style="font-weight: 400;">Set&nbsp;</span><strong>userDetails</strong><span style="font-weight: 400;">&nbsp;object properties before calling the API,</span><span style="font-weight: 400;"><br /></span></p>
 </td>
 </tr>
 </tbody>
@@ -954,7 +950,7 @@
 <p><strong>Possible Error Codes:</strong></p>
 </td>
 <td style="width: 701px;">
-<p><span style="font-weight: 400;"><br /></span><span style="font-weight: 400;">4000</span><strong>&nbsp;:</strong><span style="font-weight: 400;">&nbsp;SDK_NOT_INITIALIZED</span><span style="font-weight: 400;"><br /></span><span style="font-weight: 400;">4101 : Field is not string&nbsp;</span><span style="font-weight: 400;"><br /></span><span style="font-weight: 400;">413 : INVALID_REQUEST</span><span style="font-weight: 400;"><br /></span><span style="font-weight: 400;">400 : TRANSACTION_ERROR</span></p>
+<p><span style="font-weight: 400;">4000</span><strong>&nbsp;:</strong><span style="font-weight: 400;">&nbsp;SDK_NOT_INITIALIZED</span><span style="font-weight: 400;"><br /></span><span style="font-weight: 400;">4101 : Field is not string&nbsp;</span><span style="font-weight: 400;"><br /></span><span style="font-weight: 400;">413 : INVALID_REQUEST</span><span style="font-weight: 400;"><br /></span><span style="font-weight: 400;">400 : TRANSACTION_ERROR</span></p>
 </td>
 </tr>
 <tr>
@@ -982,7 +978,7 @@
 <td style="width: 132px;">
 <p><strong>API Signature:</strong></p>
 </td>
-<td style="width: 697px;"><br />
+<td style="width: 697px;">
 <p><span style="font-weight: 400;">-(void)</span><strong>linkSocialAccountUsingInfo</strong><span style="font-weight: 400;">: (NSDictionary *)info</span></p>
 <p><span style="font-weight: 400;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><strong>success</strong><span style="font-weight: 400;">: (voidBlock)success</span></p>
 <p><span style="font-weight: 400;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><strong>failure</strong><span style="font-weight: 400;">: (errorBlock)failure;</span></p>
@@ -993,7 +989,7 @@
 <p><strong>Possible Error Codes:</strong></p>
 </td>
 <td style="width: 697px;">
-<p><span style="font-weight: 400;"><br /></span><span style="font-weight: 400;">4000</span><strong>&nbsp;:</strong><span style="font-weight: 400;">&nbsp;SDK_NOT_INITIALIZED</span><span style="font-weight: 400;"><br /></span><span style="font-weight: 400;">4100 : DATA_NIL</span><span style="font-weight: 400;"><br /></span><span style="font-weight: 400;">413 : INVALID_REQUEST</span><span style="font-weight: 400;"><br /></span><span style="font-weight: 400;">400 : TRANSACTION_ERROR</span><span style="font-weight: 400;"><br /></span><span style="font-weight: 400;">4104 : OAUTH_ID_NOT_FOUND</span><span style="font-weight: 400;"><br /></span><span style="font-weight: 400;">4105 : OAUTH_SITE_ID_NOT_FOUND</span><span style="font-weight: 400;"><br /></span><span style="font-weight: 400;">4106 : ACCESS_TOKEN_NOT_FOUND</span></p>
+<p><span style="font-weight: 400;">4000</span><strong>&nbsp;:</strong><span style="font-weight: 400;">&nbsp;SDK_NOT_INITIALIZED</span><span style="font-weight: 400;"><br /></span><span style="font-weight: 400;">4100 : DATA_NIL</span><span style="font-weight: 400;"><br /></span><span style="font-weight: 400;">413 : INVALID_REQUEST</span><span style="font-weight: 400;"><br /></span><span style="font-weight: 400;">400 : TRANSACTION_ERROR</span><span style="font-weight: 400;"><br /></span><span style="font-weight: 400;">4104 : OAUTH_ID_NOT_FOUND</span><span style="font-weight: 400;"><br /></span><span style="font-weight: 400;">4105 : OAUTH_SITE_ID_NOT_FOUND</span><span style="font-weight: 400;"><br /></span><span style="font-weight: 400;">4106 : ACCESS_TOKEN_NOT_FOUND</span></p>
 </td>
 </tr>
 <tr>
@@ -1006,7 +1002,7 @@
 <p><span style="font-weight: 400;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;usingSocialInfo:(SSOSocialInfo * _Nullable)info</span></p>
 <p><span style="font-weight: 400;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;success:(voidBlock)success</span></p>
 <p><span style="font-weight: 400;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;failure:(errorBlock)failure;</span></p>
-<br /><br /></td>
+</td>
 </tr>
 </tbody>
 </table>
@@ -1028,7 +1024,7 @@
 <td style="width: 700px;">
 <p><span style="font-weight: 400;">-(void)</span><strong>delinkFacebook</strong><span style="font-weight: 400;">: (voidBlock)success</span></p>
 <p><span style="font-weight: 400;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><strong>failure</strong><span style="font-weight: 400;">: (errorBlock)failure;</span></p>
-<br /><br /></td>
+</td>
 </tr>
 <tr>
 <td style="width: 132px;"><br />
@@ -1042,12 +1038,12 @@
 <td style="width: 132px;">
 <p><strong>Special Instruction</strong><strong><br /></strong><strong><br /><br /></strong></p>
 </td>
-<td style="width: 700px;"><br />
+<td style="width: 700px;">
 <p><strong>Warning</strong><span style="font-weight: 400;">&nbsp;:&nbsp;</span><strong>Deprecated</strong></p>
 <p><span style="font-weight: 400;">New available method is &rarr;</span><span style="font-weight: 400;"><br /></span><span style="font-weight: 400;"><br /></span><span style="font-weight: 400;">-(void)</span><strong>performSocialActivity</strong><span style="font-weight: 400;">:(SSOSocialActivityOptions)option</span></p>
 <p><span style="font-weight: 400;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;usingSocialInfo:(SSOSocialInfo * _Nullable)info</span></p>
 <p><span style="font-weight: 400;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;success:(voidBlock)success</span></p>
-<p><span style="font-weight: 400;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;failure:(errorBlock)failure;</span><span style="font-weight: 400;"><br /><br /></span></p>
+<p><span style="font-weight: 400;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;failure:(errorBlock)failure;</span><span style="font-weight: 400;"><br /></span></p>
 </td>
 </tr>
 </tbody>
@@ -1067,11 +1063,10 @@
 <td style="width: 132px;">
 <p><strong>API Signature:</strong></p>
 </td>
-<td style="width: 692px;"><br />
+<td style="width: 692px;">
 <p><span style="font-weight: 400;">-(void)</span><strong>delinkGoogleplus</strong><span style="font-weight: 400;">: (voidBlock)success</span></p>
-<p><span style="font-weight: 400;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><strong>failure</strong><span style="font-weight: 400;">: (errorBlock)failure;</span></p>
-<p><span style="font-weight: 400;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></p>
-<br /><br /></td>
+<p><span style="font-weight: 400;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><strong>failure</strong><span style="font-weight: 400;">: (errorBlock)failure;</span>&nbsp;</p>
+</td>
 </tr>
 <tr>
 <td style="width: 132px;"><br />
@@ -1090,7 +1085,7 @@
 <p><span style="font-weight: 400;">New available method is &rarr;</span><span style="font-weight: 400;"><br /></span><span style="font-weight: 400;"><br /></span><span style="font-weight: 400;">-(void)</span><strong>performSocialActivity</strong><span style="font-weight: 400;">:(SSOSocialActivityOptions)option</span></p>
 <p><span style="font-weight: 400;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;usingSocialInfo:(SSOSocialInfo * _Nullable)info</span></p>
 <p><span style="font-weight: 400;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;success:(voidBlock)success</span></p>
-<p><span style="font-weight: 400;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;failure:(errorBlock)failure;</span><span style="font-weight: 400;"><br /><br /></span></p>
+<p><span style="font-weight: 400;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;failure:(errorBlock)failure;</span><span style="font-weight: 400;"><br /></span></p>
 </td>
 </tr>
 </tbody>
@@ -1103,7 +1098,7 @@
 <p><strong>API Name</strong><span style="font-weight: 400;"><br /><br /></span></p>
 </td>
 <td style="width: 691px;">
-<p><span style="font-weight: 400;">UPDATE MOBILE</span><span style="font-weight: 400;"><br /><br /></span></p>
+<p><span style="font-weight: 400;">UPDATE MOBILE</span><span style="font-weight: 400;"><br /></span></p>
 </td>
 </tr>
 <tr>
@@ -1113,7 +1108,7 @@
 <td style="width: 691px;">
 <p><span style="font-weight: 400;">-(void)</span><strong>updateMobile</strong><span style="font-weight: 400;">: (NSString *) mobile</span></p>
 <p><span style="font-weight: 400;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;success:(voidBlock)success</span></p>
-<p><span style="font-weight: 400;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;failure:(errorBlock)failure;</span><span style="font-weight: 400;"><br /><br /></span></p>
+<p><span style="font-weight: 400;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;failure:(errorBlock)failure;</span><span style="font-weight: 400;"><br /></span></p>
 </td>
 </tr>
 <tr>
@@ -1131,7 +1126,7 @@
 <p><span style="font-weight: 400;">402: &nbsp;</span>&nbsp;<span style="font-weight: 400;">INVALID_MOBILE</span></p>
 <p><span style="font-weight: 400;">432: &nbsp;</span>&nbsp;<span style="font-weight: 400;">BLOCKED_MOBILE</span></p>
 <p><span style="font-weight: 400;">433: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ALREADY_VERIFIED</span></p>
-<p><span style="font-weight: 400;">400: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;TRANSACTION_ERROR</span><span style="font-weight: 400;"><br />&nbsp;</span></p>
+<p><span style="font-weight: 400;">400: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;TRANSACTION_ERROR</span><span style="font-weight: 400;"><br /></span></p>
 </td>
 </tr>
 </tbody>
@@ -1177,7 +1172,7 @@
 <p><span style="font-weight: 400;">434: &nbsp;&nbsp;&nbsp;&nbsp;</span>&nbsp;<span style="font-weight: 400;">NOT_FOUND</span></p>
 <p><span style="font-weight: 400;">415: &nbsp;&nbsp;&nbsp;</span>&nbsp;<span style="font-weight: 400;">EXPIRED_OTP</span></p>
 <p><span style="font-weight: 400;">416: &nbsp;&nbsp;&nbsp;</span>&nbsp;<span style="font-weight: 400;">LIMIT_EXCEEDED</span></p>
-<p><span style="font-weight: 400;">414: &nbsp;&nbsp;</span>&nbsp;<span style="font-weight: 400;">WRONG_OTP</span><span style="font-weight: 400;"><br /><br /></span></p>
+<p><span style="font-weight: 400;">414: &nbsp;&nbsp;</span>&nbsp;<span style="font-weight: 400;">WRONG_OTP</span><span style="font-weight: 400;"><br /></span></p>
 </td>
 </tr>
 </tbody>
@@ -1271,7 +1266,7 @@
 <p><span style="font-weight: 400;">400: &nbsp;&nbsp;&nbsp;&nbsp;TRANSACTION_ERROR</span></p>
 <p><span style="font-weight: 400;">415: &nbsp;</span>&nbsp;<span style="font-weight: 400;">EXPIRED_OTP</span></p>
 <p><span style="font-weight: 400;">416: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;LIMIT_EXCEEDED</span></p>
-<p><span style="font-weight: 400;">414:&nbsp;</span><span style="font-weight: 400;">WRONG_OTP</span><span style="font-weight: 400;"><br /><br /></span></p>
+<p><span style="font-weight: 400;">414:&nbsp;</span><span style="font-weight: 400;">WRONG_OTP</span><span style="font-weight: 400;"><br /></span></p>
 </td>
 </tr>
 </tbody>
@@ -1299,9 +1294,9 @@
 <td style="width: 132px;">
 <p><strong>API Signature:</strong><strong><br /><br /></strong></p>
 </td>
-<td style="width: 686px;"><br />
+<td style="width: 686px;">
 <p><span style="font-weight: 400;">-(void )</span><strong>renewTicket</strong><span style="font-weight: 400;">:(void(^)(void))success</span></p>
-<p><span style="font-weight: 400;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;failure:(errorBlock)failure;</span><span style="font-weight: 400;"><br /><br /></span></p>
+<p><span style="font-weight: 400;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;failure:(errorBlock)failure;</span><span style="font-weight: 400;"><br /></span></p>
 </td>
 </tr>
 <tr>
@@ -1314,7 +1309,7 @@
 <p><span style="font-weight: 400;">4003: &nbsp;</span>&nbsp;<span style="font-weight: 400;">NETWORK_ERROR &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></p>
 <p><span style="font-weight: 400;">413: &nbsp;&nbsp;</span>&nbsp;<span style="font-weight: 400;">INVALID_REQUEST</span></p>
 <p><span style="font-weight: 400;">404: &nbsp;&nbsp;&nbsp;</span>&nbsp;<span style="font-weight: 400;">UNAUTHORIZED_ACCESS</span></p>
-<p><span style="font-weight: 400;">401:&nbsp;</span><span style="font-weight: 400;">&nbsp;&nbsp;INVALID_CHANNEL</span><span style="font-weight: 400;"><br /><br /></span></p>
+<p><span style="font-weight: 400;">401:&nbsp;</span><span style="font-weight: 400;">&nbsp;&nbsp;INVALID_CHANNEL</span><span style="font-weight: 400;"><br /></span></p>
 </td>
 </tr>
 </tbody>
@@ -1334,7 +1329,7 @@
 <td style="width: 132px;">
 <p><strong>API Signature:</strong></p>
 </td>
-<td style="width: 683px;"><br /><br />
+<td style="width: 683px;">
 <p><span style="font-weight: 400;">-(void)</span><strong>uploadProfilePicFromSocialUsingInfo</strong><span style="font-weight: 400;">: (NSDictionary *)info</span></p>
 <p><span style="font-weight: 400;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><strong>success</strong><span style="font-weight: 400;">: (voidBlock)success</span></p>
 <p><span style="font-weight: 400;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><strong>failure</strong><span style="font-weight: 400;">: (errorBlock)failure;</span></p>
@@ -1357,7 +1352,7 @@
 <p><span style="font-weight: 400;">New available method is &rarr;</span><span style="font-weight: 400;"><br /></span><span style="font-weight: 400;"><br /></span><span style="font-weight: 400;">-(void)</span><strong>performSocialActivity</strong><span style="font-weight: 400;">:(SSOSocialActivityOptions)option</span></p>
 <p><span style="font-weight: 400;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;usingSocialInfo:(SSOSocialInfo * _Nullable)info</span></p>
 <p><span style="font-weight: 400;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;success:(voidBlock)success</span></p>
-<p><span style="font-weight: 400;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;failure:(errorBlock)failure;</span><span style="font-weight: 400;"><br /><br /></span></p>
+<p><span style="font-weight: 400;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;failure:(errorBlock)failure;</span><span style="font-weight: 400;"><br /></span></p>
 </td>
 </tr>
 </tbody>
@@ -1377,11 +1372,11 @@
 <td style="width: 132px;">
 <p><strong>API Signature:</strong></p>
 </td>
-<td style="width: 683px;"><br />
+<td style="width: 683px;">
 <p><span style="font-weight: 400;">-(void)</span><strong>openPhotoSelectorOnViewController</strong><span style="font-weight: 400;">: (UIViewController *)vc</span></p>
 <p><span style="font-weight: 400;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><strong>success</strong><span style="font-weight: 400;">: (voidBlock)success</span></p>
 <p><span style="font-weight: 400;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><strong>failure</strong><span style="font-weight: 400;">: (errorBlock)failure;</span></p>
-<br /><br /><br /><br /><br /></td>
+</td>
 </tr>
 <tr>
 <td style="width: 132px;"><br />
@@ -1402,7 +1397,6 @@
 <p><span style="font-weight: 400;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;startRequest:(imageUploadStart) uploadStart</span></p>
 <p><span style="font-weight: 400;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;success:(successBlock)success</span></p>
 <p><span style="font-weight: 400;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;failure:(errorBlock)failure;</span></p>
-<br />
 <p><span style="font-weight: 400;">Note : SSOCamera, SSOPhotoGallery, SSODefault are different SSOPickUploadOptions.</span></p>
 </td>
 </tr>
@@ -1423,32 +1417,30 @@
 <td style="width: 134px;">
 <p><strong>API Signature:&nbsp;</strong><strong><br /></strong><strong><br /></strong><strong><br /></strong><strong><br /></strong><strong><br /><br /></strong></p>
 </td>
-<td style="width: 678px;"><br />
+<td style="width: 678px;">
 <p><span style="font-weight: 400;">-(void)</span><strong>performSocialActivity</strong><span style="font-weight: 400;">:(SSOSocialActivityOptions)option</span></p>
 <p><span style="font-weight: 400;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;usingSocialInfo:(SSOSocialInfo *)info</span></p>
 <p><span style="font-weight: 400;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;success:(voidBlock)success</span></p>
 <p><span style="font-weight: 400;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;failure:(errorBlock)failure;</span></p>
-<br /><br /></td>
+</td>
 </tr>
 <tr>
 <td style="width: 134px;"><br />
 <p><strong>Possible Error Codes:</strong><strong><br /></strong><strong><br /><br /></strong></p>
 </td>
-<td style="width: 678px;"><br />
+<td style="width: 678px;">
 <p><span style="font-weight: 400;">4000</span><strong>&nbsp;:</strong><span style="font-weight: 400;">&nbsp;SDK_NOT_INITIALIZED</span><span style="font-weight: 400;"><br /></span><span style="font-weight: 400;">413 : INVALID_REQUEST</span><span style="font-weight: 400;"><br /></span><span style="font-weight: 400;">401 : INVALID_CHANNEL</span><span style="font-weight: 400;"><br /></span><span style="font-weight: 400;">400 : TRANSACTION_ERROR</span><span style="font-weight: 400;"><br /></span><span style="font-weight: 400;">4100 : DATA_NIL</span><span style="font-weight: 400;"><br /></span><span style="font-weight: 400;">4104 : OAUTH_ID_NOT_FOUND</span></p>
 <p><span style="font-weight: 400;">4105 : OAUTH_SITE_ID_NOT_FOUND</span></p>
-<p><span style="font-weight: 400;">4106 : ACCESS_TOKEN_NOT_FOUND</span><span style="font-weight: 400;"><br /><br /></span></p>
+<p><span style="font-weight: 400;">4106 : ACCESS_TOKEN_NOT_FOUND</span><span style="font-weight: 400;"><br /></span></p>
 </td>
 </tr>
 <tr>
 <td style="width: 134px;">
 <p><strong>Special Instruction</strong><strong><br /></strong><strong><br /></strong><strong><br /></strong><strong><br /></strong><strong><br /></strong><strong><br /></strong><strong><br /></strong><strong><br /></strong><strong><br /></strong><strong><br /></strong><strong><br /><br /></strong></p>
 </td>
-<td style="width: 678px;"><br />
-<p><span style="font-weight: 400;">Note:</span></p>
-<p><strong><br /></strong><span style="font-weight: 400;">SSOFacebookLogin, SSOGoogleLogin,SSOTruecallerLogin, &nbsp;&nbsp;&nbsp;SSOFacebookLink,SSOGoogleLink, SSOFacebookPicUpload ,</span></p>
+<td style="width: 678px;">
+<p><span style="font-weight: 400;">Note:</span><strong><br /></strong><span style="font-weight: 400;">SSOFacebookLogin, SSOGoogleLogin,SSOTruecallerLogin, &nbsp;&nbsp;&nbsp;SSOFacebookLink,SSOGoogleLink, SSOFacebookPicUpload ,</span></p>
 <p><span style="font-weight: 400;">SSOGooglePicUpload , &nbsp;&nbsp;SSOFacebookDelink, SSOGoogleDelink are various SSOSocialActivityOptions.</span></p>
-<br />
 <p><span style="font-weight: 400;">For login using social info first get get SocialInfo (oauthId, accessToken) and set it to &ldquo;info&rdquo; object</span></p>
 <p><span style="font-weight: 400;">e.g.</span></p>
 <p><span style="font-weight: 400;">{</span></p>
@@ -1457,7 +1449,7 @@
 <p><span style="font-weight: 400;">KxWnIWpsXctLZARHw4J5rjH4NSAbTM0</span></p>
 <p><span style="font-weight: 400;">RtamUt0XO1d77DZAie9zmp9SNFY7hsAZDZD;</span></p>
 <p><span style="font-weight: 400;">&nbsp;&nbsp;&nbsp;oauthId = 785865238234666</span></p>
-<p><span style="font-weight: 400;">}</span><span style="font-weight: 400;"><br /><br /></span></p>
+<p><span style="font-weight: 400;">}</span><span style="font-weight: 400;"><br /></span></p>
 </td>
 </tr>
 </tbody>
@@ -1477,7 +1469,7 @@
 <td style="width: 132px;">
 <p><strong>API Signature:</strong></p>
 </td>
-<td style="width: 678px;"><br />
+<td style="width: 678px;">
 <p><span style="font-weight: 400;">-(void)updateUserDetails:(SSOUserUpdates *)userDetails</span></p>
 <p><span style="font-weight: 400;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;success:(userUpdatesBlock)success</span></p>
 <p><span style="font-weight: 400;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;failure:(errorBlock)failure;</span></p>
@@ -1497,7 +1489,6 @@
 </td>
 <td style="width: 678px;">
 <p><strong>Note:</strong><strong><br /></strong><span style="font-weight: 400;">Set user firstName, lastName, dob, gender, city properties of&nbsp;</span><span style="font-weight: 400;">userDetails object if provided.</span></p>
-<br />
 <p><span style="font-weight: 400;">V1.1.1: &nbsp;termsAccepted and ShareDataAllowed propertied added &nbsp;in SSOUserUpdates&nbsp;</span><span style="font-weight: 400;"><br /></span></p>
 </td>
 </tr>
@@ -1518,7 +1509,7 @@
 <td>
 <p><strong>API Signature:</strong><strong><br /></strong><strong><br /></strong><strong><br /><br /></strong></p>
 </td>
-<td><br />
+<td>
 <p><span style="font-weight: 400;">-(void)performSignupActivity:(SSOSignupOptions)options</span></p>
 <p><span style="font-weight: 400;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;forUser:(SSOSignupUser *)user</span></p>
 <p><span style="font-weight: 400;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;success:(voidBlock)success</span></p>
@@ -1530,21 +1521,19 @@
 <p><strong>Possible Error Codes:</strong><strong><br /></strong><strong><br /></strong><strong><br /></strong><strong><br /></strong><strong><br /></strong><strong><br /></strong><strong><br /></strong><strong><br /><br /></strong></p>
 </td>
 <td>
-<p><span style="font-weight: 400;"><br /></span><span style="font-weight: 400;">4000</span><strong>&nbsp;:</strong><span style="font-weight: 400;">&nbsp;SDK_NOT_INITIALIZED</span><span style="font-weight: 400;"><br /></span><span style="font-weight: 400;">420 : INVALID_NAME</span><span style="font-weight: 400;"><br /></span><span style="font-weight: 400;">421 : INVALID_GENDER</span><span style="font-weight: 400;"><br /></span><span style="font-weight: 400;">413 : INVALID_REQUEST</span><span style="font-weight: 400;"><br /></span><span style="font-weight: 400;">403 : INVALID_EMAIL</span><span style="font-weight: 400;"><br /></span><span style="font-weight: 400;">402 : INVALID_MOBILE</span><span style="font-weight: 400;"><br /></span><span style="font-weight: 400;">417 : INVALID_PASSWORD</span><span style="font-weight: 400;"><br /></span><span style="font-weight: 400;">429: ALREADY_REGISTERED_USER</span><span style="font-weight: 400;"><br /></span><span style="font-weight: 400;">400 : TRANSACTION_ERROR</span><span style="font-weight: 400;"><br /></span><span style="font-weight: 400;">401 : INVALID_CHANNEL</span><span style="font-weight: 400;"><br /></span><span style="font-weight: 400;">4101 : Field is not string&nbsp;</span><span style="font-weight: 400;"><br /><br /></span></p>
+<p><span style="font-weight: 400;">4000</span><strong>&nbsp;:</strong><span style="font-weight: 400;">&nbsp;SDK_NOT_INITIALIZED</span><span style="font-weight: 400;"><br /></span><span style="font-weight: 400;">420 : INVALID_NAME</span><span style="font-weight: 400;"><br /></span><span style="font-weight: 400;">421 : INVALID_GENDER</span><span style="font-weight: 400;"><br /></span><span style="font-weight: 400;">413 : INVALID_REQUEST</span><span style="font-weight: 400;"><br /></span><span style="font-weight: 400;">403 : INVALID_EMAIL</span><span style="font-weight: 400;"><br /></span><span style="font-weight: 400;">402 : INVALID_MOBILE</span><span style="font-weight: 400;"><br /></span><span style="font-weight: 400;">417 : INVALID_PASSWORD</span><span style="font-weight: 400;"><br /></span><span style="font-weight: 400;">429: ALREADY_REGISTERED_USER</span><span style="font-weight: 400;"><br /></span><span style="font-weight: 400;">400 : TRANSACTION_ERROR</span><span style="font-weight: 400;"><br /></span><span style="font-weight: 400;">401 : INVALID_CHANNEL</span><span style="font-weight: 400;"><br /></span><span style="font-weight: 400;">4101 : Field is not string&nbsp;</span><span style="font-weight: 400;"><br /></span></p>
 </td>
 </tr>
 <tr>
 <td>
 <p><strong>Special Instruction</strong><strong><br /></strong><strong><br /></strong><strong><br /></strong><strong><br /></strong><strong><br /><br /></strong></p>
 <br /><br /></td>
-<td><br />
+<td>
 <p><span style="font-weight: 400;">User can provide either mobile or email or both. After SignUp Call, User willl get an OTP on mobile (if mobile is blank OTP</span></p>
 <p><span style="font-weight: 400;">will be send on email) and then call verifySignUpUser to verify this OTP.</span></p>
-<br />
 <p><span style="font-weight: 400;">Note:</span></p>
 <p><span style="font-weight: 400;">SSOFullSignup, SSOOnlyMobileSignup are the two&nbsp;</span><span style="font-weight: 400;">SSOSignupOptions. Set user object properties which are required</span></p>
 <p><span style="font-weight: 400;">Required User Properties : name,email/moble, gender , password</span><span style="font-weight: 400;"><br /></span><span style="font-weight: 400;">Optional User Properties : 1 of email or mobile</span></p>
-<br />
 <p><span style="font-weight: 400;">V1.1.1: &nbsp;termsAccepted and ShareDataAllowed propertied added &nbsp;in SSOUserUpdates</span></p>
 </td>
 </tr>
@@ -1565,13 +1554,13 @@
 <td style="width: 132px;">
 <p><strong>API Signature:&nbsp;</strong><strong><br /></strong><strong><br /></strong><strong><br /><br /></strong></p>
 </td>
-<td style="width: 676px;"><br />
+<td style="width: 676px;">
 <p><span style="font-weight: 400;">-(void)</span><strong>performPickUploadActivity</strong><span style="font-weight: 400;">:(SSOPickUploadOptions)options</span></p>
 <p><span style="font-weight: 400;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;onController:(UIViewController *)vc</span></p>
 <p><span style="font-weight: 400;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;startRequest:(imageUploadStart) uploadStart</span></p>
 <p><span style="font-weight: 400;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;success:(successBlock)success</span></p>
 <p><span style="font-weight: 400;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;failure:(errorBlock)failure;</span></p>
-<br /><br /></td>
+</td>
 </tr>
 <tr>
 <td style="width: 132px;"><br />
@@ -1585,9 +1574,9 @@
 <td style="width: 132px;">
 <p><strong>Special Instruction</strong><strong><br /></strong><strong><br /><br /></strong></p>
 </td>
-<td style="width: 676px;"><br />
+<td style="width: 676px;">
 <p><span style="font-weight: 400;">Note :</span></p>
-<p><span style="font-weight: 400;">SSOCamera, SSOPhotoGallery, SSODefault are different SSOPickUploadOptions.</span><span style="font-weight: 400;"><br /><br /></span></p>
+<p><span style="font-weight: 400;">SSOCamera, SSOPhotoGallery, SSODefault are different SSOPickUploadOptions.</span><span style="font-weight: 400;"><br /></span></p>
 </td>
 </tr>
 </tbody>
@@ -1607,16 +1596,16 @@
 <td style="width: 132px;">
 <p><strong>API Signature:&nbsp;</strong><strong><br /></strong><strong><br /><br /></strong></p>
 </td>
-<td style="width: 674px;"><br />
+<td style="width: 674px;">
 <p><span style="font-weight: 400;">-(</span><span style="font-weight: 400;">void</span><span style="font-weight: 400;">)&nbsp;</span><strong>createAppSessionForTicketId</strong><span style="font-weight: 400;">:(NSString *)ticketId completion:(completionBlock)completion;</span></p>
-<br /><br /></td>
+</td>
 </tr>
 <tr>
 <td style="width: 132px;">
 <p><strong>Possible Error Codes:</strong><strong><br /><br /></strong></p>
 </td>
 <td style="width: 674px;">
-<p><span style="font-weight: 400;"><br /></span><span style="font-weight: 400;">4000</span><strong>&nbsp;:</strong><span style="font-weight: 400;">&nbsp;SDK_NOT_INITIALIZED</span><span style="font-weight: 400;"><br /></span><span style="font-weight: 400;">4101 : Field is not string&nbsp;</span><span style="font-weight: 400;"><br /><br /></span></p>
+<p><span style="font-weight: 400;">4000</span><strong>&nbsp;:</strong><span style="font-weight: 400;">&nbsp;SDK_NOT_INITIALIZED</span><span style="font-weight: 400;"><br /></span><span style="font-weight: 400;">4101 : Field is not string&nbsp;</span><span style="font-weight: 400;"><br /></span></p>
 </td>
 </tr>
 <tr>
@@ -1645,7 +1634,7 @@
 <td style="width: 132px;">
 <p><strong>API Signature:&nbsp;</strong><strong><br /></strong><strong><br /><br /></strong></p>
 </td>
-<td style="width: 673px;"><br />
+<td style="width: 673px;">
 <p><span style="font-weight: 400;">-(void)</span><strong>getGlobalSessionWithUserDataEnabled</strong><span style="font-weight: 400;">:(Boolean)userDataEnabled</span></p>
 <p><span style="font-weight: 400;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;completion:(sessionBlock)completion;</span></p>
 </td>
@@ -1655,14 +1644,14 @@
 <p><strong>Possible Error Codes:</strong></p>
 </td>
 <td style="width: 673px;">
-<p><span style="font-weight: 400;"><br /></span><span style="font-weight: 400;">4000</span><strong>&nbsp;:</strong><span style="font-weight: 400;">&nbsp;SDK_NOT_INITIALIZED</span><span style="font-weight: 400;"><br /></span><span style="font-weight: 400;">4103 : SESSION_NOT_FOUND</span></p>
+<p><span style="font-weight: 400;">4000</span><strong>&nbsp;:</strong><span style="font-weight: 400;">&nbsp;SDK_NOT_INITIALIZED</span><span style="font-weight: 400;"><br /></span><span style="font-weight: 400;">4103 : SESSION_NOT_FOUND</span></p>
 </td>
 </tr>
 <tr>
 <td style="width: 132px;"><br />
 <p><strong>Special Instruction</strong><strong><br /><br /></strong></p>
 </td>
-<td style="width: 673px;"><br />
+<td style="width: 673px;">
 <p><span style="font-weight: 400;">If UserDataEnabled is set to True , response will contains basic user details along with Global session.</span></p>
 </td>
 </tr>
@@ -1683,7 +1672,7 @@
 <td style="width: 132px;">
 <p><strong>API Signature:&nbsp;</strong><strong><br /><br /></strong></p>
 </td>
-<td style="width: 667px;"><br />
+<td style="width: 667px;">
 <p><span style="font-weight: 400;">-(</span><span style="font-weight: 400;">void</span><span style="font-weight: 400;">)</span><strong>getUserDetailsOnCompletion</strong><span style="font-weight: 400;">:(</span><span style="font-weight: 400;">userDetailsBlock</span><span style="font-weight: 400;">)completion;</span></p>
 </td>
 </tr>
@@ -1692,16 +1681,15 @@
 <p><strong>Possible Error Codes:</strong></p>
 </td>
 <td style="width: 667px;">
-<p><span style="font-weight: 400;"><br /></span><span style="font-weight: 400;">4000</span><strong>&nbsp;:</strong><span style="font-weight: 400;">&nbsp;SDK_NOT_INITIALIZED</span><span style="font-weight: 400;"><br /></span><span style="font-weight: 400;">401 : INVALID_CHANNEL</span><span style="font-weight: 400;"><br /></span><span style="font-weight: 400;">404 : UNAUTHORIZED_ACCESS</span></p>
+<p><span style="font-weight: 400;">4000</span><strong>&nbsp;:</strong><span style="font-weight: 400;">&nbsp;SDK_NOT_INITIALIZED</span><span style="font-weight: 400;"><br /></span><span style="font-weight: 400;">401 : INVALID_CHANNEL</span><span style="font-weight: 400;"><br /></span><span style="font-weight: 400;">404 : UNAUTHORIZED_ACCESS</span></p>
 </td>
 </tr>
 <tr>
 <td style="width: 132px;">
 <p><strong>Special Instruction</strong><strong><br /></strong><strong><br /><br /></strong></p>
 </td>
-<td style="width: 667px;"><br />
-<p><strong>Note:</strong></p>
-<p><strong><br /></strong><span style="font-weight: 400;">It return user object of &lt;&nbsp;</span><span style="font-weight: 400;">SSOUserStatus &gt;</span>&nbsp;<span style="font-weight: 400;">type</span><span style="font-weight: 400;">.</span><span style="font-weight: 400;"><br /></span><span style="font-weight: 400;">V1.1.1: &nbsp;termsAccepted and ShareDataAllowed also will be returned SSOUserDetails.</span></p>
+<td style="width: 667px;">
+<p><strong>Note:</strong><strong><br /></strong><span style="font-weight: 400;">It return user object of &lt;&nbsp;</span><span style="font-weight: 400;">SSOUserStatus &gt;</span>&nbsp;<span style="font-weight: 400;">type</span><span style="font-weight: 400;">.</span><span style="font-weight: 400;"><br /></span><span style="font-weight: 400;">V1.1.1: &nbsp;termsAccepted and ShareDataAllowed also will be returned SSOUserDetails.</span></p>
 </td>
 </tr>
 </tbody>
@@ -1721,8 +1709,8 @@
 <td>
 <p><strong>API Signature:&nbsp;</strong><strong><br /><br /></strong></p>
 </td>
-<td><br />
-<p><em><span style="font-weight: 400;">&nbsp;-(</span></em><em><span style="font-weight: 400;">SSOUserDetails</span></em><em><span style="font-weight: 400;">&nbsp;*)getUserDetailsLocal;</span></em></p>
+<td>
+<p><em><span style="font-weight: 400;">-(</span></em><em><span style="font-weight: 400;">SSOUserDetails</span></em><em><span style="font-weight: 400;">&nbsp;*)getUserDetailsLocal;</span></em></p>
 </td>
 </tr>
 <tr>
@@ -1730,20 +1718,19 @@
 <p><strong>Possible Error Codes:</strong></p>
 </td>
 <td>
-<p><span style="font-weight: 400;"><br /></span><span style="font-weight: 400;">NA</span></p>
+<p><span style="font-weight: 400;">NA</span></p>
 </td>
 </tr>
 <tr>
 <td>
 <p><strong>Special Instruction</strong><strong><br /></strong><strong><br /><br /></strong></p>
 </td>
-<td><br />
+<td>
 <p><span style="font-weight: 400;">Above method makes no server call, it fetches user data from device's keychains if available and returns.</span></p>
 <p><span style="font-weight: 400;">To use this functionality client needs to call &nbsp;</span><strong><em>getUserDetailsOnCompletion:_</em></strong><span style="font-weight: 400;">&nbsp;(which makes server call) one time just&nbsp;</span></p>
 <p><span style="font-weight: 400;">after login/signup. After any update on user's profile/details local user details is automatically updated</span></p>
 <p><span style="font-weight: 400;">(no need to call&nbsp;</span><em><span style="font-weight: 400;">getUserDetailsOnCompletion:_</span></em><span style="font-weight: 400;">&nbsp;).</span></p>
-<p>&nbsp;</p>
-<p><span style="font-weight: 400;">V1.1.1: &nbsp;termsAccepted and ShareDataAllowed also will be returned user details</span><span style="font-weight: 400;"><br />&nbsp;<br /></span></p>
+<p><span style="font-weight: 400;">V1.1.1: &nbsp;termsAccepted and ShareDataAllowed also will be returned user details</span><span style="font-weight: 400;"><br /></span></p>
 </td>
 </tr>
 </tbody>
@@ -1763,7 +1750,7 @@
 <td style="width: 132px;">
 <p><strong>API Signature:&nbsp;</strong><strong><br /><br /></strong></p>
 </td>
-<td style="width: 663px;"><br />
+<td style="width: 663px;">
 <p><span style="font-weight: 400;">-(</span><span style="font-weight: 400;">void</span><span style="font-weight: 400;">)</span><strong>getSSOAppSessionOnCompletion</strong><span style="font-weight: 400;">:(</span><span style="font-weight: 400;">sessionBlock</span><span style="font-weight: 400;">)completion;</span></p>
 </td>
 </tr>
@@ -1772,7 +1759,7 @@
 <p><strong>Possible Error Codes:</strong></p>
 </td>
 <td style="width: 663px;">
-<p><span style="font-weight: 400;"><br /></span><span style="font-weight: 400;">4000</span><strong>&nbsp;:</strong><span style="font-weight: 400;">&nbsp;SDK_NOT_INITIALIZED</span></p>
+<p><span style="font-weight: 400;">4000</span><strong>&nbsp;:</strong><span style="font-weight: 400;">&nbsp;SDK_NOT_INITIALIZED</span></p>
 </td>
 </tr>
 <tr>
@@ -1780,35 +1767,112 @@
 <p><strong>Special Instruction</strong><strong><br /></strong><strong><br /><br /></strong></p>
 </td>
 <td style="width: 663px;">
-<p><span style="font-weight: 400;">if&nbsp;</span><strong>type</strong><span style="font-weight: 400;">&nbsp;is empty, this is new app login</span><span style="font-weight: 400;"><br /></span><span style="font-weight: 400;"><br /><br /></span></p>
+<p><span style="font-weight: 400;">if&nbsp;</span><strong>type</strong><span style="font-weight: 400;">&nbsp;is empty, this is new app login</span><span style="font-weight: 400;"><br /></span></p>
 </td>
 </tr>
 </tbody>
 </table>
-<p><br /><br /><br /><br /></p>
-<p><span style="font-weight: 400;">NSSOCrossAppLoginManager&nbsp;</span><span style="font-weight: 400;">is a&nbsp;</span><strong>Singleton</strong><span style="font-weight: 400;">&nbsp;class. Only one instance will be created no matter whether you are instantiating it using &ndash;()</span><em><span style="font-weight: 400;">init method</span></em><span style="font-weight: 400;">&nbsp;or +()</span><em><span style="font-weight: 400;">sharedLoginManager</span></em>&nbsp;<em><span style="font-weight: 400;">class method</span></em><span style="font-weight: 400;">.</span></p>
-<p><span style="font-weight: 400;">NSSOCrossAppLoginManager</span><span style="font-weight: 400;">&nbsp;*manager = [</span><span style="font-weight: 400;">NSSOCrossAppLoginManager</span>&nbsp;<span style="font-weight: 400;">sharedLoginManager</span><span style="font-weight: 400;">];&nbsp;</span><br /><br /></p>
+<p>&nbsp;</p>
+<table style="width: 803px; margin-left: auto; margin-right: auto;">
+<tbody>
+<tr>
+<td style="width: 132.5px;">
+<p><strong>API Name</strong></p>
+</td>
+<td style="width: 661.5px;">
+<p><span style="font-weight: 400;">LOGIN WITH GDPR DETAILS</span></p>
+</td>
+</tr>
+<tr>
+<td style="width: 132.5px;">
+<p><strong>API Signature:&nbsp;</strong><strong><br /><br /></strong></p>
+</td>
+<td style="width: 661.5px;">
+<p><span style="font-weight: 400;">-(</span><span style="font-weight: 400;">void</span><span style="font-weight: 400;">)</span><strong>loginWithGdprDetails</strong><span style="font-weight: 400;">:</span><span style="font-weight: 400;">(GdprDetails *)gdprDetails</span><span style="font-weight: 400;">;</span></p>
+</td>
+</tr>
+<tr>
+<td style="width: 132.5px;">
+<p><strong>Possible Error Codes:</strong></p>
+</td>
+<td style="width: 661.5px;">
+<p><span style="font-weight: 400;">4000</span><strong>&nbsp;:</strong><span style="font-weight: 400;">&nbsp;SDK_NOT_INITIALIZED&nbsp;</span></p>
+<p><span style="font-weight: 400;">413 : INVALID_REQUEST</span></p>
+</td>
+</tr>
+<tr>
+<td style="width: 132.5px;"><br />
+<p><strong>Special Instruction</strong><strong><br /></strong><strong><br /><br /></strong></p>
+</td>
+<td style="width: 661.5px;">
+<p><span style="font-weight: 400;">Can be used when user hasn't accepted Gdpr terms.&nbsp;</span><span style="font-weight: 400;"><br /></span></p>
+</td>
+</tr>
+</tbody>
+</table>
+<table style="width: 803px; margin-left: auto; margin-right: auto;">
+<tbody>
+<tr>
+<td style="width: 132.5px;">
+<p><strong>API Name</strong></p>
+</td>
+<td style="width: 661.5px;">
+<p><span style="font-weight: 400;">BLOCK USER</span></p>
+</td>
+</tr>
+<tr>
+<td style="width: 132.5px;">
+<p><strong>API Signature:&nbsp;</strong><strong><br /><br /></strong></p>
+</td>
+<td style="width: 661.5px;"><br />
+<p><span style="font-weight: 400;">-(</span><span style="font-weight: 400;">void</span><span style="font-weight: 400;">)</span><span style="font-weight: 400;"><strong>blockUser</strong></span><span style="font-weight: 400;">:</span>(voidBlock)success&nbsp;<strong>failure</strong>: (errorBlock)failure</p>
+</td>
+</tr>
+<tr>
+<td style="width: 132.5px;">
+<p><strong>Possible Error Codes:</strong></p>
+</td>
+<td style="width: 661.5px;">
+<p><span style="font-weight: 400;">4000</span><strong>&nbsp;:</strong><span style="font-weight: 400;">&nbsp;SDK_NOT_INITIALIZED&nbsp;</span></p>
+<p><span style="font-weight: 400;">413 : INVALID_REQUEST</span></p>
+<p><span style="font-weight: 400;">401 : INVALID CHANNEL</span></p>
+<p><span style="font-weight: 400;">400 : TRANSACTION_ERROR</span></p>
+</td>
+</tr>
+<tr>
+<td style="width: 132.5px;"><br />
+<p><strong>Special Instruction</strong><strong><br /></strong><strong><br /><br /></strong></p>
+</td>
+<td style="width: 661.5px;">
+<p><span style="font-weight: 400;">Will block the user for the channel.</span><span style="font-weight: 400;"><br /></span></p>
+</td>
+</tr>
+</tbody>
+</table>
+<p>&nbsp;</p>
+<p style="padding-left: 30px;"><span style="font-weight: 400;"><br />NSSOCrossAppLoginManager&nbsp;</span><span style="font-weight: 400;">is a&nbsp;</span><strong>Singleton</strong><span style="font-weight: 400;">&nbsp;class. Only one instance will be created no matter whether you are instantiating it using &ndash;()</span><em><span style="font-weight: 400;">init method</span></em><span style="font-weight: 400;">&nbsp;or +()</span><em><span style="font-weight: 400;">sharedLoginManager</span></em>&nbsp;<em><span style="font-weight: 400;">class method</span></em><span style="font-weight: 400;">.</span><br /><span style="font-weight: 400;">NSSOCrossAppLoginManager</span><span style="font-weight: 400;">&nbsp;*manager = [</span><span style="font-weight: 400;">NSSOCrossAppLoginManager</span>&nbsp;<span style="font-weight: 400;">sharedLoginManager</span><span style="font-weight: 400;">];&nbsp;</span><br /><br /></p>
 <p><strong>Notes</strong><span style="font-weight: 400;">:</span></p>
 <ul>
 <li><span style="font-weight: 400;">SSO Cross App Login will work only if you run the App for the Team which team ID you have mentioned in Application delegate.</span></li>
 <li><span style="font-weight: 400;">If your deployment target is 7, include Security.framework (with status: required) and CoreFoundation.framework(with status: optional)</span></li>
 <li><strong><strong>At the time of production, developer team id must be replaced with Production team id in appDelegate.</strong></strong></li>
 </ul>
+<p>&nbsp;</p>
 <p><strong><strong>FAQ</strong></strong>&nbsp;</p>
-<p><span style="font-weight: 400;">Q: What is the minimum version supported by SSO for android and IOS</span></p>
-<p><span style="font-weight: 400;">A: for Android version 4.1 and for IOS version 7</span></p>
-<p>&nbsp;</p>
-<p><span style="font-weight: 400;">Q: &nbsp;How this new version of SSO is useful for all the business?</span></p>
-<p><span style="font-weight: 400;">A: &nbsp;It is useful as user can manage his account via single app and it will be reflected in the other apps. User will be auto login at the time of installation of app so app can have more logged in users.</span></p>
-<p>&nbsp;</p>
-<p><span style="font-weight: 400;">Q: Will my user data is consistent across the network?</span></p>
-<p><span style="font-weight: 400;">A: &nbsp;Yes, User&rsquo;s basic profile will remain same over the network as it is stored in SSO only,</span></p>
-<p>&nbsp;</p>
-<p><span style="font-weight: 400;">Q: &nbsp;Does SSO support user session across app?</span></p>
-<p><span style="font-weight: 400;">A: &nbsp;Yes, SSO supports cross app login.</span></p>
-<p>&nbsp;</p>
-<p><span style="font-weight: 400;">Q: &nbsp;</span><span style="font-weight: 400;">Can I use non Gmail account from cross app login</span><span style="font-weight: 400;">?</span></p>
-<p><span style="font-weight: 400;">A: &nbsp;Yes. User can logout and login with desired email.</span></p>
+<p style="padding-left: 30px;"><span style="font-weight: 400;">Q: What is the minimum version supported by SSO for android and IOS</span></p>
+<p style="padding-left: 30px;"><span style="font-weight: 400;">A: for Android version 4.1 and for IOS version 7</span></p>
+<p style="padding-left: 30px;">&nbsp;</p>
+<p style="padding-left: 30px;"><span style="font-weight: 400;">Q: &nbsp;How this new version of SSO is useful for all the business?</span></p>
+<p style="padding-left: 30px;"><span style="font-weight: 400;">A: &nbsp;It is useful as user can manage his account via single app and it will be reflected in the other apps. User will be auto login at the time of installation of app so app can have more logged in users.</span></p>
+<p style="padding-left: 30px;">&nbsp;</p>
+<p style="padding-left: 30px;"><span style="font-weight: 400;">Q: Will my user data is consistent across the network?</span></p>
+<p style="padding-left: 30px;"><span style="font-weight: 400;">A: &nbsp;Yes, User&rsquo;s basic profile will remain same over the network as it is stored in SSO only,</span></p>
+<p style="padding-left: 30px;">&nbsp;</p>
+<p style="padding-left: 30px;"><span style="font-weight: 400;">Q: &nbsp;Does SSO support user session across app?</span></p>
+<p style="padding-left: 30px;"><span style="font-weight: 400;">A: &nbsp;Yes, SSO supports cross app login.</span></p>
+<p style="padding-left: 30px;">&nbsp;</p>
+<p style="padding-left: 30px;"><span style="font-weight: 400;">Q: &nbsp;</span><span style="font-weight: 400;">Can I use non Gmail account from cross app login</span><span style="font-weight: 400;">?</span></p>
+<p style="padding-left: 30px;"><span style="font-weight: 400;">A: &nbsp;Yes. User can logout and login with desired email.</span></p>
 <p>&nbsp;</p>
 <p><span style="font-weight: 400;">Thank you!</span></p>
 <p>&nbsp;</p>
