@@ -46,14 +46,16 @@
 </tr>
 </tbody>
 </table>
-<h2 style="text-align: left;"><br />&nbsp;&nbsp;&nbsp;<strong>Table of Contents&nbsp;</strong></h2>
-<p>1.0 Introduction&nbsp;</p>
-<p><span style="font-weight: 400;">1.1</span>&nbsp;<span style="font-weight: 400;">User Profile Handling</span>&nbsp;</p>
-<p><span style="font-weight: 400;">1.2</span>&nbsp;<span style="font-weight: 400;">Local and Global login sessions</span>&nbsp;</p>
-<p><span style="font-weight: 400;">2.0</span>&nbsp;<span style="font-weight: 400;">Prerequisites to use Cross app SSO</span>&nbsp;</p>
-<p><span style="font-weight: 400;">3.0</span>&nbsp;<span style="font-weight: 400;">SSO Plug-in available for different Platforms</span>&nbsp;</p>
-<p><span style="font-weight: 400;">3.1</span>&nbsp;<span style="font-weight: 400;">iOS</span><span style="font-weight: 400;">&nbsp;Installation:</span>&nbsp;</p>
-<p><span style="font-weight: 400;">4.0</span>&nbsp;<span style="font-weight: 400;">FAQ</span>&nbsp;<span style="font-weight: 400;">&nbsp;</span></p>
+<h2><br /><br />&nbsp;&nbsp;&nbsp;<strong>Table of Contents&nbsp;</strong></h2>
+<ul>
+<li>Introduction&nbsp;</li>
+<li><span style="font-weight: 400;">User Profile Handling</span>&nbsp;</li>
+<li><span style="font-weight: 400;">Local and Global login sessions</span>&nbsp;</li>
+<li><span style="font-weight: 400;">Prerequisites to use Cross app SSO</span>&nbsp;</li>
+<li><span style="font-weight: 400;">SSO Plug-in available for different Platforms</span>&nbsp;</li>
+<li><span style="font-weight: 400;">iOS</span><span style="font-weight: 400;">&nbsp;Installation:</span>&nbsp;</li>
+<li><span style="font-weight: 400;">FAQ</span>&nbsp;<span style="font-weight: 400;">&nbsp;</span></li>
+</ul>
 <p>&nbsp;</p>
 <h2><strong>&nbsp;Introduction</strong></h2>
 <p><span style="font-weight: 400;">Cross app Native SSO Integration is an authentication system that permits a user to login with email/ mobile and password/OTP on a single app and get auto login on across the Times network with cross app SSO integration.</span></p>
@@ -64,14 +66,14 @@
 <h2><strong><strong>User Profile Handling</strong></strong></h2>
 <p><span style="font-weight: 400;">Basic user profile is taken care by SSO which includes</span></p>
 <ul>
-<li style="font-weight: 400;"><span style="font-weight: 400;">User Name :&nbsp;</span><em><span style="font-weight: 400;">first name and last name</span></em></li>
-<li style="font-weight: 400;"><span style="font-weight: 400;">Date of birth</span></li>
-<li style="font-weight: 400;"><span style="font-weight: 400;">Email:&nbsp;</span><em><span style="font-weight: 400;">maximum 3 emails</span></em></li>
-<li style="font-weight: 400;"><span style="font-weight: 400;">Mobile:&nbsp;</span><em><span style="font-weight: 400;">maximum 1 mobile number</span></em></li>
-<li style="font-weight: 400;"><span style="font-weight: 400;">Social Account :&nbsp;</span><em><span style="font-weight: 400;">Fb, Gp</span></em></li>
-<li style="font-weight: 400;"><span style="font-weight: 400;">Gender :&nbsp;</span><em><span style="font-weight: 400;">Mr. and Mrs.</span></em></li>
-<li style="font-weight: 400;"><span style="font-weight: 400;">User Image: &nbsp;</span><em><span style="font-weight: 400;">profile pic</span></em></li>
-<li style="font-weight: 400;"><span style="font-weight: 400;">Password:&nbsp;</span><em><span style="font-weight: 400;">User can change or update their password</span></em></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;"><strong>User Name</strong>:&nbsp;</span><em><span style="font-weight: 400;">first name and last name</span></em></li>
+<li style="font-weight: 400;"><strong>Date of birth</strong></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;"><strong>Email</strong>:&nbsp;</span><em><span style="font-weight: 400;">maximum 3 emails</span></em></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;"><strong>Mobile</strong>:&nbsp;</span><em><span style="font-weight: 400;">maximum 1 mobile number</span></em></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;"><strong>Social Account</strong>:&nbsp;</span><em><span style="font-weight: 400;">Fb, Gp</span></em></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;"><strong>Gender</strong>:&nbsp;</span><em><span style="font-weight: 400;">Mr. and Mrs.</span></em></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;"><strong>User Image</strong>: &nbsp;</span><em><span style="font-weight: 400;">profile pic</span></em></li>
+<li style="font-weight: 400;"><span style="font-weight: 400;"><strong>Password</strong>:&nbsp;</span><em><span style="font-weight: 400;">User can change or update their password</span></em></li>
 </ul>
 <p>&nbsp;</p>
 <h2><strong><strong>Global and App Session</strong></strong></h2>
@@ -155,8 +157,8 @@
 <h2><br /><strong>&nbsp;Project Setting&nbsp;</strong></h2>
 <p>&nbsp;<strong><strong>Enable Keychain&nbsp;sharing</strong></strong>&nbsp;</p>
 <p><span style="font-weight: 400;">Go to,</span></p>
-<p><span style="font-weight: 400;">Project setting &mdash;&gt; Capabilities &mdash;&gt; Keychain sharing:&nbsp;</span><span style="font-weight: 400;">ON</span></p>
-<p><span style="font-weight: 400;">keychain groups:&nbsp;</span><span style="font-weight: 400;">com.til.shared&nbsp;</span></p>
+<p><span style="font-weight: 400;">Project setting &mdash;&gt; Capabilities &mdash;&gt; Keychain sharing:&nbsp;</span><span style="font-weight: 400; color: #ff0000;">ON</span></p>
+<p><span style="font-weight: 400;">keychain groups:&nbsp;</span><strong>com.til.shared&nbsp;</strong></p>
 <p><span style="font-weight: 400;">(User&rsquo;s login credentials are kept in keychain. To share credentials among various apps of same family/devTeam a group(</span><span style="font-weight: 400;">com.til.shared</span><span style="font-weight: 400;">) is created. group+teamId identify the shared keychain. Credentials stored in shared keychain are kept in encrypted form and not accessible by any third party app).</span></p>
 <p>&nbsp;</p>
 <h2><strong>List of APIs</strong></h2>
@@ -203,8 +205,8 @@
 <p><span style="font-weight: 400;">This API must return with no error for login to work.</span></p>
 <br />
 <p><span style="font-weight: 400;">Default base urls for SSO are</span></p>
-<p><span style="font-weight: 400;">-- &ldquo; jsso.indiatimes.com&rdquo;</span></p>
-<p><span style="font-weight: 400;">-- &ldquo;socialappsintegrator.indiatimes.com&rdquo;</span></p>
+<p><strong>jsso.indiatimes.com</strong></p>
+<p><strong>socialappsintegrator.indiatimes.com</strong></p>
 <p><span style="font-weight: 400;">For Gaana team (or any other team who have their own server they) can configure like below&nbsp;</span><em><span style="font-weight: 400;">just after initializaion</span></em><span style="font-weight: 400;">:</span></p>
 <p><span style="font-weight: 400;">&nbsp;</span><span style="font-weight: 400;">loginManager.nssoBaseUrl = &lt;&gt;;</span></p>
 <p><span style="font-weight: 400;">&nbsp;&nbsp;loginManager.nssoMSocialBaseUrl = &lt;&gt;;</span></p>
@@ -1623,7 +1625,7 @@
 </td>
 <td style="width: 674px;">
 <p><span style="font-weight: 400;">This API is for unverified user but can also be used in place of migrate session.</span></p>
-<p><span style="font-weight: 400;">Sending blank or NULL ticket id assume no session is available.</span></p>
+<p><span style="font-weight: 400;">Sending blank or NULL ticket id assume no session is available.</span>&nbsp;</p>
 </td>
 </tr>
 </tbody>
@@ -1741,7 +1743,7 @@
 <p><span style="font-weight: 400;">after login/signup. After any update on user's profile/details local user details is automatically updated</span></p>
 <p><span style="font-weight: 400;">(no need to call&nbsp;</span><em><span style="font-weight: 400;">getUserDetailsOnCompletion:_</span></em><span style="font-weight: 400;">&nbsp;).</span></p>
 <p>&nbsp;</p>
-<p><span style="font-weight: 400;">V1.1.1: &nbsp;termsAccepted and ShareDataAllowed also will be returned user details</span><span style="font-weight: 400;"><br /><br /></span></p>
+<p><span style="font-weight: 400;">V1.1.1: &nbsp;termsAccepted and ShareDataAllowed also will be returned user details</span><span style="font-weight: 400;"><br />&nbsp;<br /></span></p>
 </td>
 </tr>
 </tbody>
